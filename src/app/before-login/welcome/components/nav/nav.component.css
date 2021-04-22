@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav div {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+}
+
+nav div:hover {
+    border-bottom: 1px solid black;
+}
