@@ -3,12 +3,13 @@ nav {
     justify-content: space-around;
 }
 
-nav div {
+nav a {
     box-sizing: border-box;
     margin: 10px;
     padding: 10px;
+    text-decoration: none;
 }
 
-nav div:hover {
+nav a:hover {
     border-bottom: 1px solid black;
 }
