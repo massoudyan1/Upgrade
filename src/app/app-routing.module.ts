@@ -8,6 +8,7 @@ import { WelcomeComponent } from './before-login/welcome/welcome.component';
 
 
 const routes: Routes = [
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'signin', component: SigninComponent},
