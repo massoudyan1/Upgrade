@@ -9,32 +9,31 @@ import { WelcomeComponent } from './before-login/welcome/welcome.component';
 
 const routes: Routes = [
   {
-    path: '', 
-    redirectTo: '/home', 
+    path: '',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
-    path: 'about', 
+    path: 'about',
     component: AboutComponent
   },
   {
-    path: 'contact', 
+    path: 'contact',
     component: ContactComponent
   },
   {
-    path: 'signin', 
+    path: 'signin',
     component: SigninComponent
   },
   {
-    path: 'signup', 
+    path: 'signup',
     component: SignupComponent
   },
   {
-    path: 'home', 
+    path: 'home',
     component: WelcomeComponent
   }
 ];
- 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
