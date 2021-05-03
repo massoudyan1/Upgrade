@@ -2,6 +2,8 @@
   "name": "upgrade",
   "version": "0.0.0",
   "scripts": {
+    "update": "npm update",
+    "inst": "npm install",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
