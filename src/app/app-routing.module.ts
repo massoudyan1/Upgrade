@@ -4,13 +4,15 @@ import { AboutComponent } from './before-login/welcome/components/about/about.co
 import { ContactComponent } from './before-login/welcome/components/contact/contact.component';
 import { SigninComponent } from './before-login/welcome/components/signin/signin.component';
 import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
+import { WelcomeComponent } from './before-login/welcome/welcome.component';
 
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'signin', component: SigninComponent},
-  {path: 'signup', component: SignupComponent}
+  {path: 'signup', component: SignupComponent},
+  {path: 'home', component: WelcomeComponent}
 ];
 
 @NgModule({
