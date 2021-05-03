@@ -9,6 +9,9 @@ import { ContactComponent } from './before-login/welcome/components/contact/cont
 import { NavComponent } from './before-login/welcome/components/nav/nav.component';
 import { SigninComponent } from './before-login/welcome/components/signin/signin.component';
 import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { SignupComponent } from './before-login/welcome/components/signup/signup
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
