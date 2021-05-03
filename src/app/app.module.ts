@@ -10,6 +10,8 @@ import { NavComponent } from './before-login/welcome/components/nav/nav.componen
 import { SigninComponent } from './before-login/welcome/components/signin/signin.component';
 import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
