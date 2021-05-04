@@ -60,6 +60,11 @@ body {
     background-color: #555;
   }
   
+  .row {
+      display: flex;
+      flex-direction: row;
+  }
+
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
