@@ -27,6 +27,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
     overflow-x: hidden;
+    box-sizing: border-box;
   }
   
   .card::-webkit-scrollbar-track
@@ -87,6 +88,7 @@ body {
     text-align: center;
     cursor: pointer;
     width: 100%;
+    margin-bottom: 20px;
   }
   
   .button:hover {
