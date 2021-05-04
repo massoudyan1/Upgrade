@@ -28,3 +28,10 @@ nav a:hover:after { transform: scaleX(1);
 nav a.fromLeft::after {
     transform-origin: 0% 50%;
 }
+nav a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px white;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
