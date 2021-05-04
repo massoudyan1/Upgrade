@@ -10,6 +10,7 @@ import { NavComponent } from './before-login/welcome/components/nav/nav.componen
 import { SigninComponent } from './before-login/welcome/components/signin/signin.component';
 import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {InputTextModule} from 'primeng/inputtext';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]
