@@ -10,7 +10,6 @@ nav a {
     box-sizing: border-box;
     text-decoration: none;
     margin-left: 25px;
-    margin-bottom: 5px;
     color: white;
 }
 
@@ -19,7 +18,7 @@ nav a::after {
     display: block;
     border-bottom: solid #fff 2px;
     transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms;
 }
 
 nav a:hover:after { transform: scaleX(1);
@@ -33,5 +32,8 @@ nav a:after {
     content: '';
     border-bottom: solid 3px white;  
     transform: scaleX(0);  
-    transition: transform 250ms ease-in-out;
+    transition: transform 350ms ease-in-out;
+}
+nav a:active {
+    border-bottom: solid 3px white;  
 }
