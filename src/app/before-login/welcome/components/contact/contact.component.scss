@@ -10,13 +10,12 @@ body {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background: #32a8529d;
+    background: #F6FFF8;
 }
 
 .text {
     margin-right: 50px;
 }
-  
 .input100 {
     display: block;
     width: 100%;
@@ -49,6 +48,7 @@ textarea.input100 {
     padding: 8px;
     color: white;
     background-color: #32a852;
+    border-radius: 5px;
     text-align: center;
     cursor: pointer;
     width: 100%;
