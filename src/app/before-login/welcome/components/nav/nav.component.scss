@@ -11,6 +11,13 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
-    border-bottom: 1px solid black;
-}
+nav a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #ea2129;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+  nav a:hover:after { transform: scaleX(1); }
+  nav a.fromRight:after{ transform-origin:100% 50%; }
+  nav a.fromLeft:after{  transform-origin:  0% 50%; }
