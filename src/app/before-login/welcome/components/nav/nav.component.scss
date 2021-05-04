@@ -1,16 +1,30 @@
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
+    align-items: center;
     height: 3.3em;
+    background-color: #32a852;
 }
 
 nav a {
     box-sizing: border-box;
-    margin: 10px;
-    padding: 10px;
     text-decoration: none;
+    margin-left: 25px;
+    margin-bottom: 5px;
+    color: white;
 }
 
-nav a:hover {
-    border-bottom: 1px solid black;
+nav a::after {
+    content: '';
+    display: block;
+    border-bottom: solid #fff 2px;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+nav a:hover:after { transform: scaleX(1);
+}
+
+nav a.fromLeft::after {
+    transform-origin: 0% 50%;
 }
