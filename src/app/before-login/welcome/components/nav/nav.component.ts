@@ -13,9 +13,4 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-  aktiv(){
-    
-    return 'aktiv'
-  }
 }
