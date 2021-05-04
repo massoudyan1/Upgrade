@@ -11,6 +11,7 @@ import { SigninComponent } from './before-login/welcome/components/signin/signin
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
 import { TooltipModule } from 'primeng/tooltip';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { TooltipModule } from 'primeng/tooltip';
     AppRoutingModule,
     BrowserAnimationsModule,
     InputTextModule,
-    TooltipModule
+    TooltipModule,
+    InputTextareaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
