@@ -11,6 +11,7 @@ import { SigninComponent } from './before-login/welcome/components/signin/signin
 import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {MatInputModule} from '@angular/material/input';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
