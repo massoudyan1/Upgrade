@@ -1,50 +1,35 @@
 nav {
     display: flex;
+    justify-content: left;
     align-items: center;
     height: 3.3em;
     background-color: #32a852;
-    justify-content: space-between;
-
 }
 
-nav div {
-    display: flex;
-}
-
-nav div a  {
+nav a {
     box-sizing: border-box;
     text-decoration: none;
     margin-left: 25px;
     color: white;
-
-}
-nav p {
-    margin-right: 20px;
-    color: white;
-    font: weight 80px;
-    font-size: large;
-}
-nav div a::after {
-    content: '';
-    display: block;
-    border-bottom: solid #fff 2px;
-    transform: scaleX(0);
-    transition: transform 250ms;
 }
 
-nav div a:hover:after { transform: scaleX(1);
+nav a:hover:after { transform: scaleX(1);
 }
 
-nav div a.fromLeft::after {
+nav a.fromLeft::after {
     transform-origin: 0% 50%;
 }
-nav div a:after {
+nav a:after {
     display:block;
     content: '';
     border-bottom: solid 3px white;  
     transform: scaleX(0);  
     transition: transform 350ms ease-in-out;
+    margin-bottom: -3px;
 }
-nav div a:active {
-    border-bottom: solid 3px white;  
+
+.active-link {
+    box-sizing: border-box;
+    border-bottom: solid 3px white;
+    margin-bottom: -3px;
 }
