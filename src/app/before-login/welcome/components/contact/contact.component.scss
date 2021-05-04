@@ -24,11 +24,6 @@ body {
     color: #43383e;
 }
 
-input.input100 {
-    height: 62px;
-    padding: 0 80px 0 58px;
-}
-
 textarea.input100 {
     min-height: 199px;
     padding: 19px 20px 0 23px;
@@ -38,7 +33,7 @@ textarea.input100 {
     width: 100%;
     position: relative;
     background-color: #fff;
-    margin-bottom: 17px;
+    margin-bottom: 22px;
 }
 
 .button {
@@ -52,9 +47,20 @@ textarea.input100 {
     text-align: center;
     cursor: pointer;
     width: 100%;
-
+    transition: .3s;
 }
 
 .button:hover {
     background-color: #49995e;
+}
+
+.sizes {
+    .p-inputtext {
+        display: block;
+        margin-bottom: .5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
