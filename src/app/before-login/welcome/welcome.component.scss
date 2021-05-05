@@ -11,10 +11,14 @@ body {
     align-items: center;
     padding: 15px;
     background: #F6FFF8;
+    background-image: url('https://images8.alphacoders.com/375/thumb-1920-375109.jpg');
+    opacity: 0.8;
 }
 
 .intro {
     text-align: center;
+    height: 60vh;
+    
 }
 
 .button {
@@ -27,10 +31,18 @@ body {
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    width: 60%;
+    width: 20%;
     transition: .3s;
 }
 
 .button:hover {
-    background-color: #49995e;
+    background-color: #60a372;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.subtext {
+    font-size: 20px;
 }
