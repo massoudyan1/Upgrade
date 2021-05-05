@@ -12,7 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
 import { TooltipModule } from 'primeng/tooltip';
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import { FormsModule } from '@angular/forms'
 
+import 'firebase/firestore'
+import 'firebase/auth'
 
 @NgModule({
   declarations: [
@@ -29,9 +32,12 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
     BrowserAnimationsModule,
     InputTextModule,
     TooltipModule,
-    InputTextareaModule
+    InputTextareaModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }
