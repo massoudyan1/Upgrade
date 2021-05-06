@@ -33,7 +33,7 @@ textarea.input100 {
     width: 100%;
     position: relative;
     background-color: #fff;
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 }
 
 .button {
@@ -48,10 +48,13 @@ textarea.input100 {
     cursor: pointer;
     width: 100%;
     transition: .3s;
+    height: 2.7em;
+    box-shadow: 0 5px #237539;
 }
 
 .button:hover {
-    background-color: #49995e;
+    background-color: rgb(43, 192, 83);
+    box-shadow: 0 5px #219b41;
 }
 
 .sizes {
