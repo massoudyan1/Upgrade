@@ -12,10 +12,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
 import { TooltipModule } from 'primeng/tooltip';
 import {InputTextareaModule} from 'primeng/inputtextarea';
-import { FormsModule } from '@angular/forms'
-
-import 'firebase/firestore'
-import 'firebase/auth'
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -33,11 +34,13 @@ import 'firebase/auth'
     InputTextModule,
     TooltipModule,
     InputTextareaModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  
- }
+}
