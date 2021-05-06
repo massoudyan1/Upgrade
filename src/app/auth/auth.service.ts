@@ -91,7 +91,7 @@ export class NgAuthService {
     return this.afAuth.signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          console.log('Auth login success!')
+          console.log('Auth login success!');
         });
         this.SetUserData(result.user);
       }).catch((error) => {
