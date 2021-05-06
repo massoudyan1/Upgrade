@@ -11,14 +11,13 @@ import { SigninComponent } from './before-login/welcome/components/signin/signin
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
 import { TooltipModule } from 'primeng/tooltip';
-import { InputTextareaModule } from 'primeng/inputtextarea';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { NgAuthService } from './auth/auth.service';
-import { StartPageComponent } from './after-login/start-page/start-page.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +26,7 @@ import { StartPageComponent } from './after-login/start-page/start-page.componen
     AboutComponent,
     ContactComponent,
     NavComponent,
-    SigninComponent,
-    StartPageComponent
+    SigninComponent
   ],
   imports: [
     BrowserModule,
