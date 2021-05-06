@@ -10,15 +10,31 @@ body {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background: #F6FFF8;
-    background-image: url('https://images8.alphacoders.com/375/thumb-1920-375109.jpg');
-    opacity: 0.8;
+    background: rgb(246,255,248);
+    background-image: linear-gradient(90deg, rgba(246,255,248,.7) 35%, rgba(246,255,248,.7) 100%), url('https://images8.alphacoders.com/375/thumb-1920-375109.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .intro {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 60vh;
-    
+}
+
+.welcome-msg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.welcome-msg p {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    margin-right: 0.5em;
 }
 
 .button {
@@ -28,15 +44,27 @@ body {
     padding: 8px;
     color: white;
     background-color: #32a852;
+    box-shadow: 0 5px #237539;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    width: 20%;
-    transition: .3s;
+    height: 3em;
+    width: 10em;
+    transition: .3s ease-in-out;
+    margin: 5px;
+    padding: 10px;
 }
 
 .button:hover {
-    background-color: #60a372;
+    background-color: rgb(43, 192, 83);
+    box-shadow: 0 5px #219b41;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h1 {

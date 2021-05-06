@@ -1,11 +1,12 @@
-
-
 nav {
+    position: fixed;
+    z-index: 1000000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 3.3em;
     background-color: #32a852;
+    width: 100%;
 }
 
 nav div {
@@ -22,11 +23,12 @@ nav a {
 nav p {
     margin-right: 20px;
     color: white;
-    font: weight 80px;
-    font-size: large;
+    font-weight: 100px;
+    font-size: 20px;
 }
 
-nav div a:hover:after { transform: scaleX(1);
+nav div a:hover:after { 
+    transform: scaleX(1);
 }
 
 nav div a.fromLeft::after {
