@@ -8,7 +8,8 @@ import 'firebase/auth';
 export interface User {
   uid: string;
   email: string;
-  displayName: string;
+  name: string;
+  gender: string;
   photoURL: string;
   emailVerified: boolean;
 }
@@ -103,7 +104,8 @@ export class NgAuthService {
     const userState: User = {
       uid: user.uid,
       email: user.email,
-      displayName: user.displayName,
+      name: user.Name,
+      gender: user.gender,
       photoURL: user.photoURL,
       emailVerified: user.emailVerified
     };
