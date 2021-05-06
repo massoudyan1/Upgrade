@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
+import 'firebase/auth';
 
 export interface User {
   uid: string;
@@ -41,11 +42,11 @@ export class NgAuthService {
     return this.afAuth.signInWithEmailAndPassword(email, password)
       .then((result) => {
         this.ngZone.run(() => {
-          console.log('Logged in!')
+          console.log('Logged in!');
         });
         this.SetUserData(result.user);
       }).catch((error) => {
-        window.alert(error.message);
+        console.log(error.message);
       });
   }
 
@@ -56,7 +57,7 @@ export class NgAuthService {
         this.SetUserData(result.user);
         console.log('Account created!');
       }).catch((error) => {
-        window.alert(error.message);
+        console.log(error.message);
       });
   }
 
@@ -72,7 +73,7 @@ export class NgAuthService {
       .then(() => {
         window.alert('Password reset email sent, check your inbox.');
       }).catch((error) => {
-        window.alert(error);
+        console.log(error);
       });
   }
 
@@ -82,18 +83,18 @@ export class NgAuthService {
   }
 
   GoogleAuth() {
-    return this.AuthLogin(firebase.default.auth.GoogleAuthProvider);
+    return this.AuthLogin(new firebase.default.auth.GoogleAuthProvider());
   }
 
   AuthLogin(provider: any) {
     return this.afAuth.signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          console.log('Auth login success!')
         });
         this.SetUserData(result.user);
       }).catch((error) => {
-        window.alert(error);
+        console.log(error);
       });
   }
 

@@ -5,6 +5,7 @@ import { ContactComponent } from './before-login/welcome/components/contact/cont
 import { SigninComponent } from './before-login/welcome/components/signin/signin.component';
 import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
 import { WelcomeComponent } from './before-login/welcome/welcome.component';
+import { AuthGuard } from './auth/auth.guard';
 
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: WelcomeComponent
+    component: WelcomeComponent,
+    canActivate: [AuthGuard]
   }
 ];
 @NgModule({
