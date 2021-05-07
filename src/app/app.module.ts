@@ -23,6 +23,7 @@ import {ToastModule} from 'primeng/toast';
 import { ForgotPasswordComponent } from './before-login/forgot-password/forgot-password.component';
 import { EmailVerificationComponent } from './before-login/email-verification/email-verification.component';
 import { DashboardComponent } from './after-login/dashboard/dashboard.component';
+import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { DashboardComponent } from './after-login/dashboard/dashboard.component'
     SigninComponent,
     ForgotPasswordComponent,
     EmailVerificationComponent,
-    DashboardComponent
+    DashboardComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

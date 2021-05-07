@@ -8,8 +8,6 @@ import 'firebase/auth';
 export interface User {
   uid: string;
   email: string;
-  photoURL: string;
-  emailVerified: boolean;
 }
 
 @Injectable({
@@ -65,8 +63,6 @@ export class NgAuthService {
       .then(() => {
         console.log('ev');
         this.router.navigate(['email-verification']);
-      }).catch((error) => {
-        console.log(error.message);
       });
   }
 
@@ -121,9 +117,7 @@ export class NgAuthService {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
     const userState: User = {
       uid: user.uid,
-      email: user.email,
-      photoURL: user.photoURL,
-      emailVerified: user.emailVerified
+      email: user.email
     };
     return userRef.set(userState, {
       merge: true
