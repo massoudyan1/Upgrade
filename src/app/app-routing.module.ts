@@ -8,6 +8,7 @@ import { WelcomeComponent } from './before-login/welcome/welcome.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ForgotPasswordComponent } from './before-login/forgot-password/forgot-password.component';
 import { EmailVerificationComponent } from './before-login/email-verification/email-verification.component';
+import { DashboardComponent } from './after-login/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'home',
+    component: WelcomeComponent
   },
   {
     path: 'contact',
@@ -33,8 +38,8 @@ const routes: Routes = [
     component: SignupComponent
   },
   {
-    path: 'home',
-    component: WelcomeComponent,
+    path: 'dashboard',
+    component: DashboardComponent,
     canActivate: [AuthGuard]
   },
   {
