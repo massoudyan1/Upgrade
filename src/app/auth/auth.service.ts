@@ -99,10 +99,6 @@ export class NgAuthService {
     return this.AuthLogin(new firebase.default.auth.GithubAuthProvider());
   }
 
-  AppleAuth() {
-    return this.AuthLogin(new firebase.default.auth.OAuthProvider('apple.com'));
-  }
-
   TwitterAuth() {
     return this.AuthLogin(new firebase.default.auth.TwitterAuthProvider());
   }

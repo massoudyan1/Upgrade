@@ -83,6 +83,10 @@ body * {
     font-size: 15px;
 }
 
+.alt-login {
+    width: 100%;
+}
+
 .alt-option {
     border: none;
     outline: 0;
@@ -101,19 +105,22 @@ body * {
 }
 
 .alt-option:nth-child(2) {
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .alt-option:nth-child(3) {
-    margin-right: 4px;
+    margin-right: 10px;
 }
 
 .alt-option:nth-child(4) {
-    margin-right: 4px;
+    margin-right: 10px;
 }
-.alt-option:nth-child(5) {
-    margin-right: 4px;
+
+.alt-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .alt-option:hover {
