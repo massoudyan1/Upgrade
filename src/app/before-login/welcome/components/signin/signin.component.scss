@@ -78,3 +78,46 @@ body * {
 .redirect:hover {
     color: #3cc460;
 }
+
+.alt-login p {
+    font-size: 15px;
+}
+
+.alt-option {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #32a852;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 15%;
+    transition: .3s;
+    height: 2.7em;
+    box-shadow: 0 3px #237539;
+    margin-bottom: 5px;
+}
+
+.alt-option:nth-child(2) {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.alt-option:nth-child(3) {
+    margin-right: 4px;
+}
+
+.alt-option:nth-child(4) {
+    margin-right: 4px;
+}
+.alt-option:nth-child(5) {
+    margin-right: 4px;
+}
+
+.alt-option:hover {
+    background-color: rgb(43, 192, 83);
+    box-shadow: 0 3px #219b41;
+    color:#188a37;
+}

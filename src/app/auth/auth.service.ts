@@ -87,6 +87,26 @@ export class NgAuthService {
     return this.AuthLogin(new firebase.default.auth.GoogleAuthProvider());
   }
 
+  FacebookAuth() {
+    return this.AuthLogin(new firebase.default.auth.FacebookAuthProvider());
+  }
+
+  MicrosoftAuth() {
+    return this.AuthLogin(new firebase.default.auth.OAuthProvider('microsoft.com'));
+  }
+
+  GitHubAuth() {
+    return this.AuthLogin(new firebase.default.auth.GithubAuthProvider());
+  }
+
+  AppleAuth() {
+    return this.AuthLogin(new firebase.default.auth.OAuthProvider('apple.com'));
+  }
+
+  TwitterAuth() {
+    return this.AuthLogin(new firebase.default.auth.TwitterAuthProvider());
+  }
+
   AuthLogin(provider: any) {
     return this.afAuth.signInWithPopup(provider)
       .then((result) => {
