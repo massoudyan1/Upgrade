@@ -19,6 +19,10 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { NgAuthService } from './auth/auth.service';
 import {PasswordModule} from 'primeng/password';
+import {ToastModule} from 'primeng/toast';
+import { ForgotPasswordComponent } from './before-login/forgot-password/forgot-password.component';
+import { EmailVerificationComponent } from './before-login/email-verification/email-verification.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +31,9 @@ import {PasswordModule} from 'primeng/password';
     AboutComponent,
     ContactComponent,
     NavComponent,
-    SigninComponent
+    SigninComponent,
+    ForgotPasswordComponent,
+    EmailVerificationComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,8 @@ import {PasswordModule} from 'primeng/password';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    PasswordModule
+    PasswordModule,
+    ToastModule
   ],
   providers: [NgAuthService],
   bootstrap: [AppComponent]

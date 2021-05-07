@@ -6,6 +6,8 @@ import { SigninComponent } from './before-login/welcome/components/signin/signin
 import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
 import { WelcomeComponent } from './before-login/welcome/welcome.component';
 import { AuthGuard } from './auth/auth.guard';
+import { ForgotPasswordComponent } from './before-login/forgot-password/forgot-password.component';
+import { EmailVerificationComponent } from './before-login/email-verification/email-verification.component';
 
 
 const routes: Routes = [
@@ -34,8 +36,17 @@ const routes: Routes = [
     path: 'home',
     component: WelcomeComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'forgot-password',
+    component: ForgotPasswordComponent
+  },
+  {
+    path: 'email-verification',
+    component: EmailVerificationComponent
   }
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

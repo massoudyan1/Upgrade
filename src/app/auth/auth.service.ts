@@ -65,6 +65,7 @@ export class NgAuthService {
   SendVerificationMail() {
     return this.afAuth.currentUser.then(u => this.userState.sendEmailVerification())
       .then(() => {
+        console.log('ev');
         this.router.navigate(['email-verification']);
       });
   }
@@ -72,7 +73,8 @@ export class NgAuthService {
   ForgotPassword(passwordResetEmail: string) {
     return this.afAuth.sendPasswordResetEmail(passwordResetEmail)
       .then(() => {
-        window.alert('Password reset email sent, check your inbox.');
+        console.log('fp');
+        this.router.navigate(['forgot-password']);
       }).catch((error) => {
         console.log(error);
       });
