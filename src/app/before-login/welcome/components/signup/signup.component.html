@@ -1,1 +1,44 @@
-
+<section id="sign-up">
+    <div class="login-container">
+        <div class="auth-content">
+            <p>Sign In</p>
+            <div class="auth-field">
+                <input type="email" #userEmail placeholder="Email (e.g john@doe.com)" pInputText  required/>
+            </div>
+            <div class="auth-field">
+                <input type="password" #userPwd placeholder="Adgangskode..." pInputText  required/>
+            </div>
+            <div class="formGroup"> 
+                <input type="button" class="button" value="Sign in" (click)="ngAuthService.SignUp(userEmail.value, userPwd.value)">
+            </div>
+            <div class="alt-login">
+                <p>Andre login muligheder</p>
+                <div class="alt-btns">
+                    <button type="button" class="alt-option" (click)="ngAuthService.GoogleAuth()">
+                        <i class="pi pi-google"></i>
+                    </button>
+                    <button type="button" class="alt-option" (click)="ngAuthService.FacebookAuth()">
+                        <i class="pi pi-facebook"></i>
+                    </button>
+                    <button type="button" class="alt-option" (click)="ngAuthService.MicrosoftAuth()">
+                        <i class="pi pi-microsoft"></i>
+                    </button>
+                    <button type="button" class="alt-option" (click)="ngAuthService.GitHubAuth()">
+                        <i class="pi pi-github"></i>
+                    </button>
+                    <button type="button" class="alt-option" (click)="ngAuthService.TwitterAuth()">
+                        <i class="pi pi-twitter"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="auth-options">
+                <div class="forgotPassword">
+                    <a routerLink="/forgot-password">Glemt adgangskode?</a>
+                </div>
+            </div>
+            <div class="redirect-signup">
+                <span>Ikke registeret endnu?<a class="redirect" routerLink="/sign-up"> Registrer</a></span>
+            </div>
+        </div>
+    </div>
+</section>

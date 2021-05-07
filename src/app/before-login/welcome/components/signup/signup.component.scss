@@ -1,4 +1,136 @@
-body {
+body * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+}
+
+#sign-in {
+    background-color: #F6FFF8;
+}
+
+.login-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.auth-content p {
+    font-size: 25px;
+    font-weight: 550;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.p-inputtext {
+    width: 13.5em;
+    margin-bottom: 5px;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #32a852;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    transition: .3s;
+    height: 2.7em;
+    box-shadow: 0 5px #237539;
+}
+
+.button:nth-child(1) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background-color: rgb(43, 192, 83);
+    box-shadow: 0 5px #219b41;
+}
+
+.forgotPassword {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.forgotPassword a {
+    text-decoration: none;
+    color: #32a852;
+    font-weight: 500;
+    transition: .3s ease-in-out;
+    outline: none;
+}
+
+.forgotPassword a:hover {
+    color: #3cc460;
+}
+
+.redirect {
+    text-decoration: none;
+    color: #32a852;
+    font-weight: 500;
+    transition: .3s ease-in-out;
+    outline: none;
+    font-size: 15px;
+}
+
+.redirect:hover {
+    color: #3cc460;
+}
+
+.alt-login p {
+    font-size: 15px;
+}
+
+.alt-login {
+    width: 100%;
+}
+
+.alt-option {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #32a852;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 15%;
+    transition: .3s;
+    height: 2.7em;
+    box-shadow: 0 3px #237539;
+    margin-bottom: 5px;
+}
+
+.alt-option:nth-child(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.alt-option:nth-child(3) {
+    margin-right: 10px;
+}
+
+.alt-option:nth-child(4) {
+    margin-right: 10px;
+}
+
+.alt-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alt-option:hover {
+    background-color: rgb(43, 192, 83);
+    box-shadow: 0 3px #219b41;
+    color:#188a37;
 }
