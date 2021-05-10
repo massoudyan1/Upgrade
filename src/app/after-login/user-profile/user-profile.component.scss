@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #F6FFF8;
+}
+
+.input_warp {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 25px;
+}
+
+.sizes {
+    .p-inputtext {
+        display: block;
+        margin-bottom: .5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.p-inputtext {
+    width: 20em;
+}
+
+.p-field * {
+    display: block;
+}
+
+.textarea-resize{
+    resize: none;
+}
