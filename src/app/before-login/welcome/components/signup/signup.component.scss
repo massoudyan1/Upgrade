@@ -90,6 +90,10 @@ body * {
 
 .alt-login {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .alt-option {
@@ -102,7 +106,6 @@ body * {
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
-  width: 15%;
   transition: 0.3s;
   height: 2.7em;
   box-shadow: 0 3px #237539;
