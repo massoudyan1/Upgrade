@@ -7,4 +7,5 @@ import { NgAuthService } from './auth/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title = 'Upgrade';
 }
