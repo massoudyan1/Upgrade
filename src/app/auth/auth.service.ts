@@ -2,7 +2,7 @@ import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-import * as firebase from 'firebase';
+import firebase from 'firebase/app';
 import 'firebase/auth';
 
 export interface User {
@@ -79,23 +79,23 @@ export class NgAuthService {
   }
 
   GoogleAuth() {
-    return this.AuthLogin(new firebase.default.auth.GoogleAuthProvider());
+    return this.AuthLogin(new firebase.auth.GoogleAuthProvider());
   }
 
   FacebookAuth() {
-    return this.AuthLogin(new firebase.default.auth.FacebookAuthProvider());
+    return this.AuthLogin(new firebase.auth.FacebookAuthProvider());
   }
 
   MicrosoftAuth() {
-    return this.AuthLogin(new firebase.default.auth.OAuthProvider('microsoft.com'));
+    return this.AuthLogin(new firebase.auth.OAuthProvider('microsoft.com'));
   }
 
   GitHubAuth() {
-    return this.AuthLogin(new firebase.default.auth.GithubAuthProvider());
+    return this.AuthLogin(new firebase.auth.GithubAuthProvider());
   }
 
   TwitterAuth() {
-    return this.AuthLogin(new firebase.default.auth.TwitterAuthProvider());
+    return this.AuthLogin(new firebase.auth.TwitterAuthProvider());
   }
 
   AuthLogin(provider: any) {
