@@ -61,6 +61,8 @@ export class NgAuthService {
     return this.afAuth.currentUser.then(u => this.userState.sendEmailVerification())
       .then(() => {
         this.router.navigate(['email-verification']);
+      }).catch((error) => {
+        console.log(error.message);
       });
   }
 
