@@ -24,6 +24,7 @@ import { ForgotPasswordComponent } from './before-login/forgot-password/forgot-p
 import { EmailVerificationComponent } from './before-login/email-verification/email-verification.component';
 import { DashboardComponent } from './after-login/dashboard/dashboard.component';
 import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { SignupComponent } from './before-login/welcome/components/signup/signup
     AngularFireAuthModule,
     AngularFirestoreModule,
     PasswordModule,
-    ToastModule
+    ToastModule,
+    LazyLoadImageModule
   ],
   providers: [NgAuthService],
   bootstrap: [AppComponent]
