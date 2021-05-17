@@ -1,9 +1,13 @@
+<head>
+    <link rel="stylesheet" href="user-profile.component.scss">
+  </head>
+
 <div class="main">
     <div class="profil-image">
         <img src="" alt="">
     </div>
     <div class="user-settings">
-        <h1>profil indstillinger</h1>
+        <h1>Profil indstillinger</h1>
         <div class="input_warp">
             <span class="p-float-label">
                 <input id="name" type="text" pInputText> 
@@ -21,6 +25,25 @@
                 <input id="password" type="password" class="p-inputtext" pInputText>
                 <label for="password">Password</label>
             </span>
+        </div>
+        <div class="input_warp">
+            <span class="p-float-label">
+                <input id="age" type="number" min="0" max="150" value="0">
+                <label for="Age">Alder</label>
+            </span>
+        </div>
+        <div class="input_warp">
+            <span class="p-float-label">
+                <input id="hight" type="number" min="0" max="300" value="0">
+                <label for="Age">højde i cm</label>
+            </span>
+        </div>
+        <div class="input_warp">
+            <span class="p-float-label">
+                <input id="weight" type="number" min="0" max="600" step="0.1" value="0">
+                <label for="weight">Vægt i kg.</label>
+            </span>
+
         </div>
         <button>Indsend</button>
     </div>

@@ -1,43 +1,81 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-}
-
-.main {
+  }
+  
+  .main {
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background: #F6FFF8;
-}
-
-.input_warp {
+    background: #f6fff8;
+  }
+  
+  .text {
+    margin-right: 50px;
+  }
+  .input100 {
+    display: block;
+    width: 100%;
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #43383e;
+  }
+  
+  textarea.input100 {
+    min-height: 199px;
+    padding: 19px 20px 0 23px;
+  }
+  
+  .input_warp {
     width: 100%;
     position: relative;
     background-color: #fff;
     margin-bottom: 25px;
-}
-
-.sizes {
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #32a852;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+    height: 2.7em;
+    box-shadow: 0 5px #237539;
+  }
+  
+  .button:hover {
+    background-color: rgb(43, 192, 83);
+    box-shadow: 0 5px #219b41;
+  }
+  
+  .sizes {
     .p-inputtext {
-        display: block;
-        margin-bottom: .5rem;
-        &:last-child {
-            margin-bottom: 0;
-        }
+      display: block;
+      margin-bottom: 0.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
-}
-
-.p-inputtext {
+  }
+  
+  .p-inputtext {
     width: 20em;
-}
-
-.p-field * {
+  }
+  
+  .p-field * {
     display: block;
-}
-
-.textarea-resize{
+  }
+  
+  .textarea-resize {
     resize: none;
-}
+  }
+  
