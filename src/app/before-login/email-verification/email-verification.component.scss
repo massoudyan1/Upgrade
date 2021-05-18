@@ -47,17 +47,15 @@ body {
   padding: 8px;
   color: white;
   background-color: #32a852;
-  border-radius: 5px;
+  border-radius: 20px;
   text-align: center;
   font-size: 15px;
   cursor: pointer;
   width: 17em;
   transition: 0.3s;
   height: 3em;
-  box-shadow: 0 5px #237539;
 }
 
 .button:hover {
   background-color: rgb(43, 192, 83);
-  box-shadow: 0 5px #219b41;
 }
