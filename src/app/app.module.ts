@@ -24,6 +24,7 @@ import { EmailVerificationComponent } from './before-login/email-verification/em
 import { DashboardComponent } from './after-login/dashboard/dashboard.component';
 import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     ForgotPasswordComponent,
     EmailVerificationComponent,
     DashboardComponent,
-    SignupComponent
+    SignupComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
