@@ -1,6 +1,6 @@
 <section id="contact">
     <div class="main">
-        <div class="text">
+        <div class="text"> <!-- tittle og under tekst -->
             <h1>Kontakt os</h1>
             <p> Har du bruge for noget hjælp? <br>
                 Er der nogen fejl, som du kan se eller <br>
@@ -8,7 +8,7 @@
                 Skriv endelig til os.
             </p>
         </div>
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+        <form [formGroup]="contactForm" method="POST" (ngSubmit)="onSubmit(contactForm.value)">
             <div class="input_warp">
                 <span class="p-float-label">
                     <input type="text" pInputText formControlName="name">
@@ -17,7 +17,7 @@
                         *ngIf="!contactForm.controls['name'].valid && contactform.controls['name'].dirty"></p-message>
                 </span>
             </div>
-            <div class="input_warp">
+            <div class="input_warp"> <!-- skriv din email -->
                 <span class="p-float-label">
                     <input type="email" class="p-inputtext" pInputText formControlName="email">
                     <label for="email">Email</label>
@@ -30,7 +30,7 @@
                 <textarea rows="10" cols="30" class="textarea-resize" pInputTextarea name="message"
                     placeholder="Besked her..."></textarea>
             </div>
-            <div>
+            <div> <!-- send besked -->
                 <button class="button">Send besked</button>
             </div>
         </form>
