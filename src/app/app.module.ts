@@ -25,6 +25,7 @@ import { DashboardComponent } from './after-login/dashboard/dashboard.component'
 import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
+import { MessageModule } from 'primeng/message';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { UserProfileComponent } from './after-login/user-profile/user-profile.co
     AngularFirestoreModule,
     PasswordModule,
     ToastModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    MessageModule
   ],
   providers: [NgAuthService],
   bootstrap: [AppComponent]

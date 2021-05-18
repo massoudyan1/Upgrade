@@ -8,19 +8,24 @@
                 Skriv endelig til os.
             </p>
         </div>
-        <div>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
             <div class="input_warp">
                 <span class="p-float-label">
-                    <input id="name" type="text" pInputText>
-                    <label for="float-input">Navn</label>
+                    <input type="text" pInputText formControlName="name">
+                    <label for="name">Navn</label>
+                    <p-message severity="error" text="Du skal skrive dit navn ind."
+                        *ngIf="!contactForm.controls['name'].valid && contactform.controls['name'].dirty"></p-message>
                 </span>
             </div>
             <div class="input_warp">
                 <span class="p-float-label">
-                    <input id="email" type="email" class="p-inputtext" pInputText>
+                    <input type="email" class="p-inputtext" pInputText formControlName="email">
                     <label for="email">Email</label>
                 </span>
+                <p-message severity="error" text="Du skal skrive din mail ind."
+                    *ngIf="!contactForm.controls['email'].valid && contactForm.controls['email'].dirty"></p-message>
             </div>
+            <input>
             <div class="input_warp">
                 <textarea rows="10" cols="30" class="textarea-resize" pInputTextarea name="message"
                     placeholder="Besked her..."></textarea>
@@ -28,6 +33,6 @@
             <div>
                 <button class="button">Send besked</button>
             </div>
-        </div>
+        </form>
     </div>
 </section>
