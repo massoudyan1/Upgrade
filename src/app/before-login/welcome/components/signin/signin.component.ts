@@ -11,7 +11,7 @@ import { NgAuthService } from 'src/app/auth/auth.service';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(public ngAuthService: NgAuthService) {  }
+  constructor(public ngAuthService: NgAuthService) { }
 
   ngOnInit(): void {
   }
