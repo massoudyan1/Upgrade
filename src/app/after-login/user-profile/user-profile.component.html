@@ -1,41 +1,48 @@
+<head>
+    <link rel="stylesheet" href="user-profile.component.scss">
+</head>
+
 <div class="main">
     <div class="user-settings">
+        <!-- tittle -->
         <h1>Profil indstillinger</h1>
-        <div class="input_warp">
+        <div class="input_warp"> <!-- ændre profil billede -->
             <span class="input_warp">
+                <!-- profil billede -->
                 <img src="" alt="profilbillede">
                 <br>
+                <!-- input og ændre billede -->
                 <input id="img" type="file" class="p-inputtext" accept="image/*" pInputText>
                 <label for="image">Profilbillede</label>
             </span>
         </div>
-        <div class="input_warp">
+        <div class="input_warp"> <!-- ændre navn -->
             <span class="p-float-label">
                 <input id="name" type="text" class="p-inputtext" pInputText>
                 <label for="float-input">Navn</label>
             </span>
         </div>
-        <div class="input_warp">
+        <div class="input_warp"> <!-- ændre Email -->
             <span class="p-float-label">
                 <input id="email" type="email" class="p-inputtext" pInputText>
                 <label for="email">Email</label>
             </span>
         </div>
-        <div class="input_warp">
+        <div class="input_warp"> <!-- ændre kodeord -->
             <span class="p-float-label">
                 <input id="password" type="password" class="p-inputtext" pInputText>
                 <label for="password">Password</label>
             </span>
         </div>
-        <div class="input_warp">
+        <div class="input_warp"> <!-- ændre fødselsdag -->
             <span class="p-float-label">
                 <input id="birthday" type="date" class="p-inputtext" pInputText>
                 <label for="birthday">fødselsdag</label>
             </span>
         </div>
-        <div class="input_warp">
+        <div class="input_warp"> <!-- ændre højde -->
             <span class="p-float-label">
-                <select id="age" class="p-inputtext" pInputText>
+                <select id="hight" class="p-inputtext" pInputText>
                     <option value=""> vælg højde i cm </option>
                     <option class="1">1 cm</option>
                     <option class="2">2 cm</option>
@@ -50,7 +57,7 @@
                 </select>
             </span>
         </div>
-        <div class="input_warp">
+        <div class="input_warp"> <!-- ændre vægt -->
             <span class="p-float-label">
                 <input id="weight" type="number" min="0" max="600" step="0.1" value="0" class="p-inputtext" pInputText>
                 <label for="weight">Vægt i kg.</label>
