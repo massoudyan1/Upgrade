@@ -3,14 +3,19 @@
   </head>
 
 <div class="main">
-    <div class="profil-image">
-        <img src="" alt="">
-    </div>
     <div class="user-settings">
         <h1>Profil indstillinger</h1>
         <div class="input_warp">
+            <span class="input_warp">
+                <img src="" alt="profilbillede">
+                <br>
+                <input id="img" type="file" class="p-inputtext" accept="image/*" pInputText>
+                <label for="image">Profilbillede</label>
+            </span>
+        </div>
+        <div class="input_warp">
             <span class="p-float-label">
-                <input id="name" type="text" pInputText> 
+                <input id="name" type="text" class="p-inputtext" pInputText> 
                 <label for="float-input">Navn</label>
             </span>
         </div>
@@ -28,19 +33,30 @@
         </div>
         <div class="input_warp">
             <span class="p-float-label">
-                <input id="age" type="number" min="0" max="150" value="0">
-                <label for="Age">Alder</label>
+                <input id="birthday" type="date" class="p-inputtext" pInputText>
+                <label for="birthday">fødselsdag</label>
             </span>
         </div>
         <div class="input_warp">
             <span class="p-float-label">
-                <input id="hight" type="number" min="0" max="300" value="0">
-                <label for="Age">højde i cm</label>
+                <select id="age" class="p-inputtext" pInputText>
+                    <option value=""> vælg højde i cm </option>
+                    <option class="1">1 cm</option>
+                    <option class="2">2 cm</option>
+                    <option class="3">3 cm</option>
+                    <option class="4">4 cm</option>
+                    <option class="5">5 cm</option>
+                    <option class="6">6 cm</option>
+                    <option class="7">7 cm</option>
+                    <option class="8">8 cm</option>
+                    <option class="9">9 cm</option>
+                    <option class="10">10 cm</option>
+                   </select>
             </span>
         </div>
         <div class="input_warp">
             <span class="p-float-label">
-                <input id="weight" type="number" min="0" max="600" step="0.1" value="0">
+                <input id="weight" type="number" min="0" max="600" step="0.1" value="0" class="p-inputtext" pInputText>
                 <label for="weight">Vægt i kg.</label>
             </span>
 
