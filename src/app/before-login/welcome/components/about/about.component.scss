@@ -84,20 +84,20 @@ html {
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #32a852;
+  background-color: rgba(50, 168, 82, 0.9);
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: 40%;
   margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   transition: 0.3s;
   height: 2.4em;
-  box-shadow: 0 3px #237539;
+  /*box-shadow: 0 3px #237539;*/
 }
 
 .button:hover {
   background-color: rgb(43, 192, 83);
-  box-shadow: 0 3px #219b41;
+  /*box-shadow: 0 3px #219b41;*/
 }
 
 .row {
