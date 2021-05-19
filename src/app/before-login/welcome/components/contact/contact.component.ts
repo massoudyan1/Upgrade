@@ -1,24 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  FormControl,
+  Validators
+} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  providers: [MessageService]
 })
 export class ContactComponent implements OnInit {
-
   contactForm: FormGroup;
   submitted = false;
   isLoading = false;
   name: FormControl = new FormControl('', [Validators.required]);
-  email: FormControl = new FormControl('', [Validators.required, Validators.email]);
-  message: FormControl = new FormControl('', [Validators.required, Validators.maxLength(256)]);
+  email: FormControl = new FormControl('', [
+    Validators.required,
+    Validators.email
+  ]);
+  message: FormControl = new FormControl('', [
+    Validators.required,
+    Validators.maxLength(256)
+  ]);
   honeypot: FormControl = new FormControl('');
 
-  constructor(private fb: FormBuilder, private messageService: MessageService, private http: HttpClient) {
+  constructor(
+    private fb: FormBuilder,
+    private messageService: MessageService,
+    private http: HttpClient
+  ) {
     this.contactForm = this.fb.group({
       name: this.name,
       email: this.email,
@@ -27,49 +42,59 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
   onSubmit() {
     if (this.contactForm.status == 'VALID' && this.honeypot.value == '') {
+      const { name, email, message } = this.contactForm.value;
       this.contactForm.disable();
-      const formData:FormData = new FormData();
-      formData.append('name', this.contactForm.get('name').value);
-      formData.append('email', this.contactForm.get('email').value);
-      formData.append('message', this.contactForm.get('message').value);
+      var formData: any = new FormData();
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('message', message);
       this.isLoading = true;
       this.submitted = false;
-      this.http.post('URL FROM GOOGLE HERE', formData).subscribe(
-        (response) => {
-          if (response == 'success') {
-            this.messageService.add({
-              severity: 'success',
-              summary: 'Success',
-              detail: 'Den mail er blevet sendt.'
-            });
-          } else {
+      this.http
+        .post(
+          'https://script.google.com/macros/s/AKfycbxvqs5CmelHvCgJ0PYKYkV01JxWN1W2MKvMbiErKAArz4M5cgdK/exec',
+          formData
+        )
+        .subscribe(
+          (response: any) => {
+            if (response['result'] == 'success') {
+              console.log('Mail send');
+              this.messageService.add({
+                severity: 'success',
+                summary: 'Success',
+                detail: 'Din mail er blevet sendt.',
+                life: 1500
+              });
+            } else {
+              this.messageService.add({
+                severity: 'error',
+                summary: 'Error',
+                detail: 'Afsendelsen af din mail fik en fejl.',
+                life: 1500
+              });
+            }
+            this.contactForm.enable();
+            this.submitted = true;
+            this.isLoading = false;
+            console.log(response);
+          },
+          error => {
             this.messageService.add({
               severity: 'error',
               summary: 'Error',
-              detail: 'Afsendelsen af din mail fik en fejl.'
+              detail:
+                'En fejl er opstået, prøv og genindlæs siden igen eller prøv senere.',
+              life: 1500
             });
+            this.contactForm.enable();
+            this.submitted = true;
+            this.isLoading = false;
+            console.log(error);
           }
-          this.contactForm.enable();
-          this.submitted = true;
-          this.isLoading = false;
-          console.log(response);
-        },
-        (error) => {
-          this.messageService.add({
-            severity: 'error',
-            summary: 'Error',
-            detail: 'En fejl er opstået, prøv og genindlæs siden igen eller prøv senere.'
-          });
-          this.contactForm.enable();
-          this.submitted = true;
-          this.isLoading = false;
-          console.log(error);
-        }
-      );
+        );
     }
   }
 }
