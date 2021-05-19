@@ -13,25 +13,25 @@
         <form [formGroup]="contactForm" method="POST" (ngSubmit)="onSubmit()">
             <div class="input_warp">
                 <span class="p-float-label">
-                    <input type="text" pInputText formControlName="name">
+                    <input type="text" #name pInputText formControlName="name">
                     <label for="name">Navn</label>
                 </span>
             </div>
             <div class="input_warp">
                 <!-- skriv din email -->
                 <span class="p-float-label">
-                    <input type="email" class="p-inputtext" pInputText formControlName="email">
+                    <input type="email" #email class="p-inputtext" pInputText formControlName="email">
                     <label for="email">Email</label>
                 </span>
             </div>
             <input formControlName="honeypot" class="hidden" type="text">
             <div class="input_warp">
-                <textarea rows="10" cols="30" class="textarea-resize" formControlName="message" pInputTextarea
+                <textarea #message rows="10" cols="30" class="textarea-resize" formControlName="message" pInputTextarea
                     name="message" placeholder="Besked her..."></textarea>
             </div>
             <div>
                 <!-- send besked -->
-                <button class="button" [disabled]="isLoading" type="submit">Send besked</button>
+                <button class="button" [disabled]="isLoading" (click)="handleClear()" type="submit">Send besked</button>
             </div>
         </form>
     </div>

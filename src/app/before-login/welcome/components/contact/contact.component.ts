@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {
   FormGroup,
   FormBuilder,
@@ -15,6 +15,9 @@ import { MessageService } from 'primeng/api';
   providers: [MessageService]
 })
 export class ContactComponent implements OnInit {
+  @ViewChild('name') inputName;
+  @ViewChild('email') inputEmail;
+  @ViewChild('message') inputMsg;
   contactForm: FormGroup;
   submitted = false;
   isLoading = false;
@@ -61,7 +64,6 @@ export class ContactComponent implements OnInit {
         .subscribe(
           (response: any) => {
             if (response['result'] == 'success') {
-              console.log('Mail send');
               this.messageService.add({
                 severity: 'success',
                 summary: 'Success',
@@ -96,5 +98,10 @@ export class ContactComponent implements OnInit {
           }
         );
     }
+  }
+  handleClear() {
+    this.inputName.nativeElement.value = '';
+    this.inputEmail.nativeElement.value = '';
+    this.inputMsg.nativeElement.value = '';
   }
 }
