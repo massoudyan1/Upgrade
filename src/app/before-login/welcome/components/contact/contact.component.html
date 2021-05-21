@@ -18,13 +18,14 @@
                 </span>
             </div>
             <div class="input_warp">
-                <!-- skriv din email -->
                 <span class="p-float-label">
                     <input type="email" #email class="p-inputtext" pInputText formControlName="email">
                     <label for="email">Email</label>
                 </span>
             </div>
             <input formControlName="honeypot" class="hidden" type="text">
+            <p-message class="msg-position" severity="error" text="Maks 256 karakterer"
+                *ngIf="contactForm.get('message').hasError('maxlength')"></p-message>
             <div class="input_warp">
                 <textarea #message rows="10" cols="30" class="textarea-resize" formControlName="message" pInputTextarea
                     name="message" placeholder="Besked her..."></textarea>

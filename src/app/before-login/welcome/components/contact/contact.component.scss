@@ -80,3 +80,16 @@ textarea.input100 {
 .hidden {
   display: none;
 }
+
+.msg-position {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: -20px;
+  margin-bottom: 2px;
+}
+
+.toolTip {
+  background-color: #fff;
+  color: #fff;
+}
