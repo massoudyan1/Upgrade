@@ -9,7 +9,7 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent {
   title = 'Upgrade';
-  constructor(private primengConfig: PrimeNGConfig) {}
+  constructor(private primengConfig: PrimeNGConfig) { }
 
   ngOnInit() {
     this.primengConfig.ripple = true;
