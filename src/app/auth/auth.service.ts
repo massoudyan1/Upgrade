@@ -27,10 +27,10 @@ export class NgAuthService {
       if (user) {
         this.userState = user;
         localStorage.setItem('user', JSON.stringify(this.userState));
-        JSON.parse(localStorage.getItem('user') || '{}');
+        JSON.parse(localStorage.getItem('user'));
       } else {
         localStorage.setItem('user', null as any);
-        JSON.parse(localStorage.getItem('user') || '{}');
+        JSON.parse(localStorage.getItem('user'));
       }
     });
   }
