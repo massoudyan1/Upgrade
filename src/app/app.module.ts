@@ -26,7 +26,8 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
 import { MessageModule } from 'primeng/message';
 import { HttpClientModule } from '@angular/common/http';
-import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
     LazyLoadImageModule,
     MessageModule,
     HttpClientModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    ButtonModule
   ],
   providers: [NgAuthService],
   bootstrap: [AppComponent]

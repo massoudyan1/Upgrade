@@ -32,7 +32,8 @@
             </div>
             <div>
                 <!-- send besked -->
-                <button class="button" [disabled]="isLoading" (click)="handleClear()" type="submit">Send besked</button>
+                <button class="button" pButton [disabled]="isLoading" [iconPos]="left" [loading]="isLoading"
+                    (click)="handleClear()" type="submit" label="Send besked"></button>
             </div>
         </form>
     </div>
