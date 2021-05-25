@@ -28,6 +28,7 @@ import { MessageModule } from 'primeng/message';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { ButtonModule } from 'primeng/button';
     MessageModule,
     HttpClientModule,
     ConfirmDialogModule,
-    ButtonModule
+    ButtonModule,
+    RippleModule
   ],
   providers: [NgAuthService],
   bootstrap: [AppComponent]

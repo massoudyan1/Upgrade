@@ -1,7 +1,7 @@
 <p-toast [style]="{ marginTop: '100px' }"></p-toast>
 <section id="contact">
     <div class="main">
-        <div class="text">
+        <div class="wText">
             <!-- tittle og under tekst -->
             <h1>Kontakt os</h1>
             <p> Har du bruge for noget hjælp? <br>
@@ -33,7 +33,7 @@
             <div>
                 <!-- send besked -->
                 <button class="button" pButton [disabled]="isLoading" [loading]="isLoading"
-                    (click)="handleClear()" type="submit" label="Send besked"></button>
+                    (click)="handleClear()" type="submit" pRipple label="Send besked"></button>
             </div>
         </form>
     </div>
