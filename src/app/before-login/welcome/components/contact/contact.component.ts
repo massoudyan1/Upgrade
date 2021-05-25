@@ -80,6 +80,7 @@ export class ContactComponent implements OnInit {
             }
             this.contactForm.enable();
             this.submitted = true;
+            this.contactForm.reset();
             this.isLoading = false;
             console.log(response);
           },
