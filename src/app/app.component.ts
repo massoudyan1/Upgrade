@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgAuthService } from './auth/auth.service';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import { NgAuthService } from './auth/auth.service';
 })
 export class AppComponent {
   title = 'Upgrade';
+  constructor(private primengConfig: PrimeNGConfig) { }
+
+  ngOnInit() {
+    this.primengConfig.ripple = true;
+  }
 }

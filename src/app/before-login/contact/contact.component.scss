@@ -13,20 +13,8 @@ body {
   background: #f6fff8;
 }
 
-.text {
+.wText {
   margin-right: 50px;
-}
-.input100 {
-  display: block;
-  width: 100%;
-  font-family: Helvetica;
-  font-size: 15px;
-  color: #43383e;
-}
-
-textarea.input100 {
-  min-height: 199px;
-  padding: 19px 20px 0 23px;
 }
 
 .input_warp {
@@ -79,4 +67,12 @@ textarea.input100 {
 
 .hidden {
   display: none;
+}
+
+.msg-position {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: -20px;
+  margin-bottom: 2px;
 }

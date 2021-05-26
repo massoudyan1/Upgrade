@@ -9,7 +9,6 @@ import { NavComponent } from './before-login/nav/nav.component';
 import { SigninComponent } from './before-login/signin/signin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
-import { TooltipModule } from 'primeng/tooltip';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
@@ -27,6 +26,9 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
 import { MessageModule } from 'primeng/message';
 import { HttpClientModule } from '@angular/common/http';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
 
 
 @NgModule({
@@ -48,7 +50,6 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     InputTextModule,
-    TooltipModule,
     InputTextareaModule,
     FormsModule,
     ReactiveFormsModule,
@@ -59,7 +60,10 @@ import { HttpClientModule } from '@angular/common/http';
     ToastModule,
     LazyLoadImageModule,
     MessageModule,
-    HttpClientModule
+    HttpClientModule,
+    ConfirmDialogModule,
+    ButtonModule,
+    RippleModule
   ],
   providers: [NgAuthService],
   bootstrap: [AppComponent]

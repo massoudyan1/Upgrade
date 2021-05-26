@@ -29,15 +29,20 @@ html {
   margin: 8px;
   overflow-x: hidden;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .card::-webkit-scrollbar-track {
   background-color: #f5f5f5;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .card::-webkit-scrollbar {
   width: 10px;
   background-color: #f5f5f5;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .card::-webkit-scrollbar-thumb {
@@ -52,6 +57,8 @@ html {
     transparent 75%,
     transparent
   );
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #about {
