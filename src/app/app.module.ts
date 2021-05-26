@@ -9,7 +9,6 @@ import { NavComponent } from './before-login/nav/nav.component';
 import { SigninComponent } from './before-login/signin/signin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
-import { TooltipModule } from 'primeng/tooltip';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
@@ -27,13 +26,15 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
 import { MessageModule } from 'primeng/message';
 import { HttpClientModule } from '@angular/common/http';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
 import { FaerdighederComponent } from './after-login/faerdigheder/faerdigheder.component';
 import { EnkeltComponent } from './after-login/faerdigheder/enkelt/enkelt.component';
 import { KategoriComponent } from './after-login/faerdigheder/kategori/kategori.component';
 import { OpgraderComponent } from './after-login/faerdigheder/opgrader/opgrader.component';
 import { SlutsideComponent } from './after-login/faerdigheder/slutside/slutside.component';
 import { BeskederComponent } from './after-login/beskeder/beskeder.component';
-import { FileUploadModule } from 'primeng/fileupload';
 
 
 @NgModule({
@@ -61,7 +62,6 @@ import { FileUploadModule } from 'primeng/fileupload';
     AppRoutingModule,
     BrowserAnimationsModule,
     InputTextModule,
-    TooltipModule,
     InputTextareaModule,
     FormsModule,
     ReactiveFormsModule,
@@ -73,7 +73,9 @@ import { FileUploadModule } from 'primeng/fileupload';
     LazyLoadImageModule,
     MessageModule,
     HttpClientModule,
-    FileUploadModule
+    ConfirmDialogModule,
+    ButtonModule,
+    RippleModule
   ],
   providers: [NgAuthService],
   bootstrap: [AppComponent]

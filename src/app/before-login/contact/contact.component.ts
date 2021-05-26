@@ -68,18 +68,19 @@ export class ContactComponent implements OnInit {
                 severity: 'success',
                 summary: 'Success',
                 detail: 'Din mail er blevet sendt.',
-                life: 1500
+                life: 2000
               });
             } else {
               this.messageService.add({
                 severity: 'error',
                 summary: 'Error',
                 detail: 'Afsendelsen af din mail fik en fejl.',
-                life: 1500
+                life: 2000
               });
             }
             this.contactForm.enable();
             this.submitted = true;
+            this.contactForm.reset();
             this.isLoading = false;
             console.log(response);
           },
@@ -89,7 +90,7 @@ export class ContactComponent implements OnInit {
               summary: 'Error',
               detail:
                 'En fejl er opstået, prøv og genindlæs siden igen eller prøv senere.',
-              life: 1500
+              life: 2000
             });
             this.contactForm.enable();
             this.submitted = true;

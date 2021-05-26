@@ -1,86 +1,71 @@
 <div class="main">
     <div class="user-settings">
         <h1>Profil indstillinger</h1>
-        <div class="flex-container">
-            <div class="Profil-image">
-                <img src="" alt="image">
-            </div>
-            <div class="Userdata">
-                <div class="input_warp"> <!-- ændre navn -->
-                    <span class="p-float-label">
-                        <h3>Owen de Guzman <button>edit</button></h3>
-                        <label for="float-input">Navn</label>
-                    </span>
-                </div>
-                <div class="input_warp"> <!-- ændre Email -->
-                    <span class="p-float-label">
-                        <h3>owen.de.guzman@gmail.com</h3>
-                        <label for="email">Email</label>
-                    </span>
-                </div>
-                <div class="input_warp"> <!-- ændre kodeord -->
-                    <span class="p-float-label">
-                        <h3>Passw0rd</h3>
-                        <label for="password">Password</label>
-                    </span>
-                </div>
-                <div class="input_warp"> <!-- ændre fødselsdag -->
-                    <span class="p-float-label">
-                        <h3>10/7/2001</h3>
-                        <label for="birthday">fødselsdag</label>
-                    </span>
-                </div>
-                <div class="input_warp"> <!-- ændre højde -->
-                    <span class="p-float-label">
-                        <h3>170</h3>
-                        <label for="Hight">Højde</label>
-                    </span>
-                </div>
-                <div class="input_warp"> <!-- ændre vægt -->
-                    <span class="p-float-label">
-                        <h3>63</h3>
-                        <label for="weight">Vægt i kg.</label>
-                    </span>
-                </div>
-            </div>
-            <div class="UserLevel">
-                <div class="input_warp"> <!-- ændre navn -->
-                    <span class="p-float-label">
-                        <h3>Level 2</h3>
-                        <label for="færdighed1">Svømning</label>
-                    </span>
-                </div>
-                <div class="input_warp"> <!-- ændre Email -->
-                    <span class="p-float-label">
-                        <h3>Level 9</h3>
-                        <label for="færdighed2">tærning</label>
-                    </span>
-                </div>
-                <div class="input_warp"> <!-- ændre kodeord -->
-                    <span class="p-float-label">
-                        <h3>Level 1</h3>
-                        <label for="færdighed3">Mad lavning</label>
-                    </span>
-                </div>
-                <div class="input_warp"> <!-- ændre fødselsdag -->
-                    <span class="p-float-label">
-                        <h3>Level 3</h3>
-                        <label for="færdighed4">Læse træning</label>
-                    </span>
-                </div>
-                <div class="input_warp"> <!-- ændre højde -->
-                    <span class="p-float-label">
-                        <h3>level 0</h3>
-                        <label for="færdighed5">none</label>
-                    </span>
-                </div>
-                <div class="input_warp"> <!-- ændre vægt -->
-                    <span class="p-float-label">
-                        <h3>level 0</h3>
-                        <label for="færdighed6">none</label>
-                    </span>
-                </div>
-            </div>
+        <div class="input_warp">
+            <!-- ændre profil billede -->
+            <span class="input_warp">
+                <!-- profil billede -->
+                <img src="" alt="profilbillede">
+                <br>
+                <!-- input og ændre billede -->
+                <input id="img" type="file" class="p-inputtext" accept="image/*" pInputText>
+                <label for="image">Profilbillede</label>
+            </span>
         </div>
+        <div class="input_warp">
+            <!-- ændre navn -->
+            <span class="p-float-label">
+                <input id="name" type="text" class="p-inputtext" pInputText>
+                <label for="float-input">Navn</label>
+            </span>
+        </div>
+        <div class="input_warp">
+            <!-- ændre Email -->
+            <span class="p-float-label">
+                <input id="email" type="email" class="p-inputtext" pInputText>
+                <label for="email">Email</label>
+            </span>
+        </div>
+        <div class="input_warp">
+            <!-- ændre kodeord -->
+            <span class="p-float-label">
+                <input id="password" type="password" class="p-inputtext" pInputText>
+                <label for="password">Password</label>
+            </span>
+        </div>
+        <div class="input_warp">
+            <!-- ændre fødselsdag -->
+            <span class="p-float-label">
+                <input id="birthday" type="date" class="p-inputtext" pInputText>
+                <label for="birthday">fødselsdag</label>
+            </span>
+        </div>
+        <div class="input_warp">
+            <!-- ændre højde -->
+            <span class="p-float-label">
+                <select id="hight" class="p-inputtext" pInputText>
+                    <option value=""> vælg højde i cm </option>
+                    <option class="1">1 cm</option>
+                    <option class="2">2 cm</option>
+                    <option class="3">3 cm</option>
+                    <option class="4">4 cm</option>
+                    <option class="5">5 cm</option>
+                    <option class="6">6 cm</option>
+                    <option class="7">7 cm</option>
+                    <option class="8">8 cm</option>
+                    <option class="9">9 cm</option>
+                    <option class="10">10 cm</option>
+                </select>
+            </span>
+        </div>
+        <div class="input_warp">
+            <!-- ændre vægt -->
+            <span class="p-float-label">
+                <input id="weight" type="number" min="0" max="600" step="0.1" value="0" class="p-inputtext" pInputText>
+                <label for="weight">Vægt i kg.</label>
+            </span>
+
+        </div>
+        <button>Indsend</button>
     </div>
 </div>
