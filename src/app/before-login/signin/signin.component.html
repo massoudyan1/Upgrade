@@ -3,14 +3,14 @@
         <div class="auth-content">
             <p>Sign In</p>
             <div class="auth-field">
-                <input type="email" placeholder="Email (e.g john@doe.com)" pInputText #userName />
+                <input type="email" placeholder="Email (e.g john@doe.com)" pInputText #userName  />
             </div>
             <div class="auth-field">
                 <input type="password" placeholder="Adgangskode..." pInputText #userPassword />
             </div>
             <div class="formGroup">
                 <input type="button" class="button" value="Sign in"
-                    (click)="ngAuthService.SignIn(userName.value, userPassword.value)">
+                    (click)="logIn()">
             </div>
         </div>
         <div class="alt-login">
