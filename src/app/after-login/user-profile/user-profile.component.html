@@ -2,48 +2,55 @@
     <div class="user-settings">
         <!-- tittle -->
         <h1>Profil indstillinger</h1>
-        <div class="input_warp"> <!-- ændre profil billede -->
+        <div class="profile-image">
+            <!-- profil billede -->
+            <img src="" alt="profilbillede">
+        </div>
+        <div class="input_warp">
+            <!-- ændre profil billede -->
             <span class="input_warp">
-                <!-- profil billede -->
-                <img src="" alt="profilbillede">
-                <br>
-                <br>
                 <!-- input og ændre billede -->
                 <input id="img" type="file" class="p-inputtext" accept="image/*" pInputText>
-                <label for="image">Profilbillede</label>
+                <label for="img">Profilbillede</label>
             </span>
         </div>
-        <div class="input_warp"> <!-- ændre navn -->
+        <div class="input_warp">
+            <!-- ændre navn -->
             <span class="p-float-label">
-                <input id="name" type="text" class="p-inputtext" pInputText>
-                <label for="float-input">Navn</label>
+                <input id="name" type="text" class="p-inputtext" pInputText autocomplete="doNotAutoComplete">
+                <label for="name">Navn</label>
             </span>
         </div>
-        <div class="input_warp"> <!-- ændre Email -->
+        <div class="input_warp">
+            <!-- ændre Email -->
             <span class="p-float-label">
-                <input id="email" type="email" class="p-inputtext" pInputText>
+                <input id="email" type="email" class="p-inputtext" pInputText autocomplete="doNotAutoComplete">
                 <label for="email">Email</label>
             </span>
         </div>
-        <div class="input_warp"> <!-- ændre kodeord -->
+        <div class="input_warp">
+            <!-- ændre kodeord -->
             <span class="p-float-label">
-                <input id="password" type="password" class="p-inputtext" pInputText>
+                <input id="password" type="password" class="p-inputtext" pInputText autocomplete="doNotAutoComplete">
                 <label for="password">Password</label>
             </span>
         </div>
-        <div class="input_warp"> <!-- ændre fødselsdag -->
+        <div class="input_warp">
+            <!-- ændre fødselsdag -->
             <span class="p-float-label">
-                <input id="birthday" type="date" class="p-inputtext" pInputText>
-                <label for="birthday">fødselsdag</label>
+                <input id="birthday" type="date" class="p-inputtext" pInputText autocomplete="doNotAutoComplete">
+                <label for="birthday">Fødselsdag</label>
             </span>
         </div>
-        <div class="input_warp"> <!-- ændre højde -->
+        <div class="input_warp">
+            <!-- ændre højde -->
             <span class="p-float-label">
-                <input id="Hight" type="text" class="p-inputtext" pInputText>
-                <label for="Hight">Højde</label>
+                <input id="height" type="text" class="p-inputtext" pInputText autocomplete="doNotAutoComplete">
+                <label for="height">Højde</label>
             </span>
         </div>
-        <div class="input_warp"> <!-- ændre vægt -->
+        <div class="input_warp">
+            <!-- ændre vægt -->
             <span class="p-float-label">
                 <input id="weight" type="number" min="0" max="600" step="0.1" value="0" class="p-inputtext" pInputText>
                 <label for="weight">Vægt i kg.</label>
