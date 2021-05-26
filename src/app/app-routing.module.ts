@@ -9,6 +9,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { ForgotPasswordComponent } from './before-login/forgot-password/forgot-password.component';
 import { EmailVerificationComponent } from './before-login/email-verification/email-verification.component';
 import { DashboardComponent } from './after-login/dashboard/dashboard.component';
+import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
 
 
 const routes: Routes = [
@@ -49,6 +50,10 @@ const routes: Routes = [
   {
     path: 'email-verification',
     component: EmailVerificationComponent
+  },
+  {
+    path: 'user-profile',
+    component: UserProfileComponent
   }
 ];
 
