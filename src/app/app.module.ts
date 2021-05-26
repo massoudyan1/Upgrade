@@ -32,6 +32,7 @@ import { EnkeltComponent } from './after-login/faerdigheder/enkelt/enkelt.compon
 import { KategoriComponent } from './after-login/faerdigheder/kategori/kategori.component';
 import { OpgraderComponent } from './after-login/faerdigheder/opgrader/opgrader.component';
 import { SlutsideComponent } from './after-login/faerdigheder/slutside/slutside.component';
+import { BeskederComponent } from './after-login/beskeder/beskeder.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { SlutsideComponent } from './after-login/faerdigheder/slutside/slutside.
     EnkeltComponent,
     KategoriComponent,
     OpgraderComponent,
-    SlutsideComponent
+    SlutsideComponent,
+    BeskederComponent
   ],
   imports: [
     BrowserModule,
