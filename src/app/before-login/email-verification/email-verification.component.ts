@@ -19,6 +19,6 @@ export class EmailVerificationComponent implements OnInit {
   }
 
   ToastMsg() {
-    console.log(this.ngAuthService.SendVerificationMail.toString());
+    
   }
 }
