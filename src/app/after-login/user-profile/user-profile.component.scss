@@ -16,18 +16,6 @@ body {
 .text {
   margin-right: 50px;
 }
-.input100 {
-  display: block;
-  width: 100%;
-  font-family: Helvetica;
-  font-size: 15px;
-  color: #43383e;
-}
-
-textarea.input100 {
-  min-height: 199px;
-  padding: 19px 20px 0 23px;
-}
 
 .input_warp {
   width: 100%;
@@ -71,8 +59,4 @@ textarea.input100 {
 
 .p-field * {
   display: block;
-}
-
-.textarea-resize {
-  resize: none;
 }
