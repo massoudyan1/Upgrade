@@ -57,7 +57,7 @@ export class NgAuthService {
       });
   }
 
-  SendVerificationMail() {
+  SendVerificationMail(): Promise<any> {
     return this.afAuth.currentUser.then(u => this.userState.sendEmailVerification())
       .then(() => {
         this.router.navigate(['email-verification']);

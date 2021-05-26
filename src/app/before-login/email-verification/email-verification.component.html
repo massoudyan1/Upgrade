@@ -7,7 +7,7 @@
                     <p>Bekræftelsesmailen er sendt til: <strong>{{user.email}}</strong>.</p>
                 </div>
                 <div class="btn-container">
-                    <button type="button" class="button" (click)="ngAuthService.SendVerificationMail()">
+                    <button type="button" class="button" (click)="ngAuthService.SendVerificationMail(); ToastMsg()">
                         Resend Verification Email
                     </button>
                 </div>
