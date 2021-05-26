@@ -27,6 +27,12 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
 import { MessageModule } from 'primeng/message';
 import { HttpClientModule } from '@angular/common/http';
+import { FaerdighederComponent } from './after-login/faerdigheder/faerdigheder.component';
+import { EnkeltComponent } from './after-login/faerdigheder/enkelt/enkelt.component';
+import { KategoriComponent } from './after-login/faerdigheder/kategori/kategori.component';
+import { OpgraderComponent } from './after-login/faerdigheder/opgrader/opgrader.component';
+import { SlutsideComponent } from './after-login/faerdigheder/slutside/slutside.component';
+import { BeskederComponent } from './after-login/beskeder/beskeder.component';
 
 
 @NgModule({
@@ -41,7 +47,13 @@ import { HttpClientModule } from '@angular/common/http';
     EmailVerificationComponent,
     DashboardComponent,
     SignupComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    FaerdighederComponent,
+    EnkeltComponent,
+    KategoriComponent,
+    OpgraderComponent,
+    SlutsideComponent,
+    BeskederComponent
   ],
   imports: [
     BrowserModule,
