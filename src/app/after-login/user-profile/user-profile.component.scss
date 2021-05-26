@@ -13,8 +13,24 @@ body {
   background: #f6fff8;
 }
 
-.text {
-  margin-right: 50px;
+.user-settings h1 {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  height: 100%;
+  background-color: #32a852;
+  border-radius: 15px;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 500px;
+  margin: 20px;
+  text-align: center;
+  line-height: 75px;
+  border-radius: 15px;
 }
 
 .input_warp {
@@ -24,60 +40,6 @@ body {
   margin-bottom: 25px;
 }
 
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #32a852;
-  border-radius: 20px;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  transition: 0.3s;
-  height: 2.7em;
-}
-
-.button:hover {
-  background-color: rgb(43, 192, 83);
-}
-
-.sizes {
-  .p-inputtext {
-    display: block;
-    margin-bottom: 0.5rem;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.p-inputtext {
-  width: 20em;
-}
-
-.p-field * {
-  display: block;
-}
-
-.textarea-resize {
-  resize: none;
-}
-
-input[type=date]::-webkit-datetime-edit-text {
-  -webkit-appearance: none;
-  display: none;
-}
-input[type=date]::-webkit-datetime-edit-month-field{
-  -webkit-appearance: none;
-  display: none;
-}
-input[type=date]::-webkit-datetime-edit-day-field {
-  -webkit-appearance: none;
-  display: none;
-}
-input[type=date]::-webkit-datetime-edit-year-field {
-  -webkit-appearance: none;
-  display: none;
+label {
+  margin-left: 20px;
 }
