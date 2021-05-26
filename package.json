@@ -25,7 +25,6 @@
     "@angular/platform-browser": "^11.2.14",
     "@angular/platform-browser-dynamic": "^11.2.14",
     "@angular/router": "^11.2.14",
-    "angularfire2": "^5.4.2",
     "firebase": "^8.6.2",
     "logrocket": "^1.2.1",
     "ng-lazyload-image": "^9.1.0",
