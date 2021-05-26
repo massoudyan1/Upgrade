@@ -71,7 +71,7 @@ export class NgAuthService {
       .then(() => {
         this.router.navigate(['forgot-password']);
       }).catch((error) => {
-        console.log(error);
+        console.log(error.message);
       });
   }
 
@@ -108,7 +108,7 @@ export class NgAuthService {
         });
         this.SetUserData(result.user);
       }).catch((error) => {
-        console.log(error);
+        console.log(error.message);
       });
   }
 
