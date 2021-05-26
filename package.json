@@ -27,7 +27,7 @@
     "@angular/router": "^11.2.14",
     "angularfire2": "^5.4.2",
     "firebase": "^8.6.2",
-    "logrocket": "^1.2.1",
+    "logrocket": "^1.2.0",
     "ng-lazyload-image": "^9.1.0",
     "primeicons": "^4.1.0",
     "primeng": "^11.4.2",

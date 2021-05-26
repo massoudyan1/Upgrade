@@ -27,10 +27,10 @@ export class NgAuthService {
       if (user) {
         this.userState = user;
         localStorage.setItem('user', JSON.stringify(this.userState));
-        JSON.parse(localStorage.getItem('user'));
+        JSON.parse(localStorage.getItem('user') || '{}');
       } else {
         localStorage.setItem('user', null as any);
-        JSON.parse(localStorage.getItem('user'));
+        JSON.parse(localStorage.getItem('user') || '{}');
       }
     });
   }
@@ -71,12 +71,12 @@ export class NgAuthService {
       .then(() => {
         this.router.navigate(['forgot-password']);
       }).catch((error) => {
-        console.log(error.message);
+        console.log(error);
       });
   }
 
   get isLoggedIn(): boolean {
-    const user = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
     return (user !== null && user.emailVerified !== false) ? true : false;
   }
 
@@ -108,7 +108,7 @@ export class NgAuthService {
         });
         this.SetUserData(result.user);
       }).catch((error) => {
-        console.log(error.message);
+        console.log(error);
       });
   }
 

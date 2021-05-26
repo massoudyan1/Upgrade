@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './before-login/welcome/welcome.component';
-import { AboutComponent } from './before-login/welcome/components/about/about.component';
-import { ContactComponent } from './before-login/welcome/components/contact/contact.component';
-import { NavComponent } from './before-login/welcome/components/nav/nav.component';
-import { SigninComponent } from './before-login/welcome/components/signin/signin.component';
+import { AboutComponent } from './before-login/about/about.component';
+import { ContactComponent } from './before-login/contact/contact.component';
+import { NavComponent } from './before-login/nav/nav.component';
+import { SigninComponent } from './before-login/signin/signin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
+import { TooltipModule } from 'primeng/tooltip';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
@@ -21,14 +22,11 @@ import { ToastModule } from 'primeng/toast';
 import { ForgotPasswordComponent } from './before-login/forgot-password/forgot-password.component';
 import { EmailVerificationComponent } from './before-login/email-verification/email-verification.component';
 import { DashboardComponent } from './after-login/dashboard/dashboard.component';
-import { SignupComponent } from './before-login/welcome/components/signup/signup.component';
+import { SignupComponent } from './before-login/signup/signup.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
 import { MessageModule } from 'primeng/message';
 import { HttpClientModule } from '@angular/common/http';
-import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { ButtonModule } from 'primeng/button';
-import { RippleModule } from 'primeng/ripple';
 
 
 @NgModule({
@@ -50,6 +48,7 @@ import { RippleModule } from 'primeng/ripple';
     AppRoutingModule,
     BrowserAnimationsModule,
     InputTextModule,
+    TooltipModule,
     InputTextareaModule,
     FormsModule,
     ReactiveFormsModule,
@@ -60,10 +59,7 @@ import { RippleModule } from 'primeng/ripple';
     ToastModule,
     LazyLoadImageModule,
     MessageModule,
-    HttpClientModule,
-    ConfirmDialogModule,
-    ButtonModule,
-    RippleModule
+    HttpClientModule
   ],
   providers: [NgAuthService],
   bootstrap: [AppComponent]
