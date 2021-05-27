@@ -35,6 +35,8 @@ import { KategoriComponent } from './after-login/faerdigheder/kategori/kategori.
 import { OpgraderComponent } from './after-login/faerdigheder/opgrader/opgrader.component';
 import { SlutsideComponent } from './after-login/faerdigheder/slutside/slutside.component';
 import { BeskederComponent } from './after-login/beskeder/beskeder.component';
+import { UploadService } from './storage/upload.service';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -75,9 +77,10 @@ import { BeskederComponent } from './after-login/beskeder/beskeder.component';
     HttpClientModule,
     ConfirmDialogModule,
     ButtonModule,
-    RippleModule
+    RippleModule,
+    AngularFireStorageModule
   ],
-  providers: [NgAuthService],
+  providers: [NgAuthService, UploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

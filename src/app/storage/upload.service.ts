@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
-import firebase from 'firebase/app'
+import firebase from 'firebase/app';
 import { User } from '../auth/auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class FirebaseUploadService {
+export class UploadService {
   constructor(private afStorage: AngularFireStorage, private user: User) { }
-  iUser = this.user.uid
+  iUser = this.user.uid;
   private basePath = `/uploads/images/${this.iUser}`;
   file: File;
   url = '';
