@@ -4,7 +4,8 @@ import { UploadService } from '../../storage/upload.service';
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.scss']
+  styleUrls: ['./user-profile.component.scss'],
+  providers: [UploadService]
 })
 export class UserProfileComponent implements OnInit {
   constructor(private uploadService: UploadService) { }

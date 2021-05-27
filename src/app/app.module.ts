@@ -26,7 +26,6 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
 import { MessageModule } from 'primeng/message';
 import { HttpClientModule } from '@angular/common/http';
-import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { FaerdighederComponent } from './after-login/faerdigheder/faerdigheder.component';
@@ -36,7 +35,6 @@ import { OpgraderComponent } from './after-login/faerdigheder/opgrader/opgrader.
 import { SlutsideComponent } from './after-login/faerdigheder/slutside/slutside.component';
 import { BeskederComponent } from './after-login/beskeder/beskeder.component';
 import { UploadService } from './storage/upload.service';
-import { AngularFireStorageModule } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -75,10 +73,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     LazyLoadImageModule,
     MessageModule,
     HttpClientModule,
-    ConfirmDialogModule,
     ButtonModule,
-    RippleModule,
-    AngularFireStorageModule
+    RippleModule
   ],
   providers: [NgAuthService, UploadService],
   bootstrap: [AppComponent]
