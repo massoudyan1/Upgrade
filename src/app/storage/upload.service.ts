@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import firebase from 'firebase/app';
-import { User } from '../auth/auth.service';
+import { User, NgAuthService } from '../auth/auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +9,7 @@ import { User } from '../auth/auth.service';
 export class UploadService {
   file: File;
   url = '';
-  constructor(private afStorage: AngularFireStorage, public user: User) { }
+  constructor(private afStorage: AngularFireStorage, @Inject(NgAuthService) private user: User) { }
   iUser = this.user.uid;
   basePath = `/uploads/images/${this.iUser}`;
 

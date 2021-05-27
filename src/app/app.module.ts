@@ -76,7 +76,7 @@ import { UploadService } from './storage/upload.service';
     ButtonModule,
     RippleModule
   ],
-  providers: [NgAuthService, UploadService],
+  providers: [NgAuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
