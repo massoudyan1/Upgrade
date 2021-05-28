@@ -36,6 +36,8 @@ import { SlutsideComponent } from './after-login/faerdigheder/slutside/slutside.
 import { BeskederComponent } from './after-login/beskeder/beskeder.component';
 import {FileUploadModule} from 'primeng/fileupload';
 import { UploadService } from './storage/upload.service';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage'; 
 
 
 
@@ -77,7 +79,9 @@ import { UploadService } from './storage/upload.service';
     HttpClientModule,
     ButtonModule,
     RippleModule,
-    FileUploadModule
+    FileUploadModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule
   ],
   providers: [NgAuthService, UploadService],
   bootstrap: [AppComponent]
