@@ -1,13 +1,8 @@
 import { Injectable, Inject } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
-import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 import firebase from 'firebase/app';
 import { User, NgAuthService } from '../auth/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
-
-interface ProfileImgUrls {
-  profilepic?: string;
-}
 
 @Injectable({
   providedIn: 'root',
@@ -15,52 +10,49 @@ interface ProfileImgUrls {
 export class UploadService {
 
   userState: any;
-  ProfileImgUrl: AngularFireObject<ProfileImgUrls>;
 
   constructor(private afStorage: AngularFireStorage,
-    private afDatabase: AngularFireDatabase,
     private afAuth: AngularFireAuth,
     @Inject(NgAuthService) private user: User
   ) {
-    this.ProfileImgUrl = this.afDatabase.object(`/profileinfo/${this.iUser}/profilepic`);
     this.afAuth.authState.subscribe(user => {
       if (user) {
-        this.userState = user;
-        localStorage.setItem('user', JSON.stringify(this.userState));
-        JSON.parse(localStorage.getItem('user'));
+        this.userState = user; // Sets userState to what state the user is in.
+        localStorage.setItem('user', JSON.stringify(this.userState)); // Stores user info on browser.
+        JSON.parse(localStorage.getItem('user')); // Retrieve user data into normal array.
       } else {
-        localStorage.setItem('user', null as any);
-        JSON.parse(localStorage.getItem('user'));
+        localStorage.setItem('user', null as any); // Stores user info on browser.
+        JSON.parse(localStorage.getItem('user'));  // Retrieve user data into normal array.
       }
     });
   }
-  file: File;
-  url = '';
-  iUserData = JSON.parse(localStorage.getItem('user'));
-  iUser = this.iUserData.uid;
-  basePath = `/uploads/images/${this.iUser}`;
+  file: File; // Uses File functionality to get item info.
+  url = ''; // Used below for URL storage.
+  iUserData = JSON.parse(localStorage.getItem('user')); // Parses JSON Array to normal Array.
+  iUser = this.iUserData.uid; // Gets unique id from localStorage item.
+  basePath = `/uploads/images/${this.iUser}`; // Reference for basePath.
 
-  //method to upload file at firebase storage
+  // Function that will upload image to Firebase Storage
   async uploadFile(event: any) {
-    this.file = event.files[0];
-    const filePath = `${this.basePath}/profilepic`;
-    const metaData = { 'contentType': this.file.type };
-    await this.afStorage.upload(filePath, this.file, metaData);
-    if (this.file) {
-      console.log('Uploading: ', this.file.name);
-      this.getUrl();
+    this.file = event.files[0]; // Takes the image from the upload component
+    const filePath = `${this.basePath}/profilepic`; // Constant for file placement
+    const metaData = { 'contentType': this.file.type }; // Metadata for the image file
+    await this.afStorage.upload(filePath, this.file, metaData); // Uploads image to Firebase
+    if (this.file) { // Checks if fil value has a file(which means true)
+      console.log('Uploading: ', this.file.name); // Shows file uploading in Console.
+      this.getUrl(); // Runs getURL function to display image.
     } else {
       console.log('Select a image please.');
     }
   }
 
-  //method to retrieve download url
+  // Function to get downloadURL for item
   async getUrl() {
-    const filePath = `${this.basePath}/profilepic`; // error is coming from here.
-    const snap = this.afStorage.storage.ref(filePath);
+    const filePath = `${this.basePath}/profilepic`; // Constant for file placement
+    const snap = this.afStorage.storage.ref(filePath); // Gets location of item
     await snap.getDownloadURL().then(url => {
-      this.url = url;  //store the URL
-      console.log(this.url);
+      this.url = url;  // Store downloadURL from Firebase
+      console.log('Upload done'); // Tells upload is done
     });
   }
 }
