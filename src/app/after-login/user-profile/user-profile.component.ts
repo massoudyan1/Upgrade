@@ -1,16 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { UploadService } from '../../storage/upload.service';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.scss']
+  styleUrls: ['./user-profile.component.scss'],
 })
 export class UserProfileComponent implements OnInit {
-  constructor(private uploadService: UploadService) { }
+  constructor(
+    public uploadService: UploadService,
+    public afStorage: AngularFireStorage,
+    ) { }
 
-  image = this.uploadService.url;
+    image = this.uploadService.url;
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.uploadService.getUrl();
   }
 }
