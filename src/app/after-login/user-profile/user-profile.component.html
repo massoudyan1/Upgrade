@@ -8,9 +8,9 @@
                         [defaultImage]="'https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=790b761155be4ddd23123de1bf9d94fce21877f4e92e9726&rid=giphy.gif&ct=g'"
                         [lazyLoad]="this.uploadService.url" alt="image" />
                 </div>
-                <p-fileUpload name="myfile[]" mode="basic" auto="true" chooseLabel="Vælg..." uploadLabel="Upload..."
-                    cancelLabel="Afbryd..." fileLimit="1" customUpload="true"
-                    (uploadHandler)="uploadService.uploadFile($event)" accept="image/*"></p-fileUpload>
+                <p-fileUpload name="myfile[]" mode="basic" auto="true" chooseLabel="Vælg billede..." fileLimit="1"
+                    customUpload="true" (uploadHandler)="uploadService.uploadFile($event)" accept="image/*">
+                </p-fileUpload>
             </div>
             <div class="Userdata">
                 <div class="input_warp">
