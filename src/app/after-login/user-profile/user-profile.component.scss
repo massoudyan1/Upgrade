@@ -25,21 +25,21 @@ body {
 }
 
 .flex-container > div {
-  background-color: #f1f1f1;
+  background-color: #fff;
   width: 500px;
   margin: 20px;
   text-align: center;
-  line-height: 75px;
   border-radius: 15px;
 }
 
 .imageBox {
-  background-color: #f1f1f1;
-  height: 70%;
+  background-color: #fff;
+  height: 55%;
+  border-radius: 15px;
 }
 
-.UserIamge {
-  width: 60%;
+.UserImage {
+  max-width: 60%;
   padding: 20px;
 }
 
@@ -47,9 +47,19 @@ body {
   width: 100%;
   position: relative;
   background-color: #fff;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
+  margin-top: 70px;
 }
 
 label {
   margin-left: 20px;
+}
+
+:host ::ng-deep .p-fileupload-basic {
+  margin-bottom: 2em;
+}
+
+.profil-image p {
+  font-size: 20px;
+  font-weight: 450;
 }
