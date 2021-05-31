@@ -34,12 +34,10 @@ import { KategoriComponent } from './after-login/faerdigheder/kategori/kategori.
 import { OpgraderComponent } from './after-login/faerdigheder/opgrader/opgrader.component';
 import { SlutsideComponent } from './after-login/faerdigheder/slutside/slutside.component';
 import { BeskederComponent } from './after-login/beskeder/beskeder.component';
-import {FileUploadModule} from 'primeng/fileupload';
+import { FileUploadModule } from 'primeng/fileupload';
 import { UploadService } from './storage/upload.service';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFireStorageModule } from '@angular/fire/storage'; 
-
-
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
