@@ -19,6 +19,5 @@ export class EmailVerificationComponent implements OnInit {
   }
 
   ToastMsg() {
-    
   }
 }
