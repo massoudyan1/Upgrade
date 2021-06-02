@@ -8,7 +8,12 @@ import 'firebase/auth';
 export interface User {
   uid: string;
   email: string;
-  name: string;
+  displayName: string;
+  emailVerified: boolean;
+  dob: string;
+  gender: string;
+  height: string;
+  weight: string;
 }
 
 @Injectable({
@@ -117,7 +122,12 @@ export class NgAuthService {
     const userState: User = {
       uid: user.uid,
       email: user.email,
-      name: user.displayName
+      displayName: user.displayName,
+      emailVerified: user.emailVerified,
+      dob: user.dob,
+      gender: user.gender,
+      height: user.height,
+      weight: user.weight
     };
     return userRef.set(userState, {
       merge: true
