@@ -29,8 +29,7 @@ export class NgAuthService {
         localStorage.setItem('user', JSON.stringify(this.userState));
         JSON.parse(localStorage.getItem('user'));
       } else {
-        localStorage.setItem('user', null as any);
-        JSON.parse(localStorage.getItem('user'));
+        localStorage.removeItem('user');
       }
     });
   }
@@ -123,10 +122,9 @@ export class NgAuthService {
     });
   }
 
-  SignOut() {
-    return this.afAuth.signOut().then(() => {
-      localStorage.removeItem('user');
-      this.router.navigate(['home']);
-    });
+  async SignOut() {
+    await this.afAuth.signOut();
+    localStorage.removeItem('user');
+    this.router.navigate(['home']);
   }
 }
