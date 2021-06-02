@@ -14,9 +14,21 @@ export class UserProfileComponent implements OnInit {
     public afStorage: AngularFireStorage,
     public ngAuthService: NgAuthService
     ) { }
-
+  
+  jUserData = JSON.parse(localStorage.getItem('user'));
+  userData: string;
 
   ngOnInit() {
     this.uploadService.getUrl();
+    this.getUserInfo();
+  }
+
+  getUserInfo() {
+    if(this.jUserData.displayName == '') {
+      this.userData = 'Unknown';
+      console.log(this.userData);
+    } else {
+      this.userData = this.jUserData.displayName;
+    }
   }
 }
