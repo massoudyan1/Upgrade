@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UploadService } from '../../storage/upload.service';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { NgAuthService } from 'src/app/auth/auth.service';
+import { UserDataService } from '../../data/user-data.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -12,13 +13,13 @@ export class UserProfileComponent implements OnInit {
   constructor(
     public uploadService: UploadService,
     public afStorage: AngularFireStorage,
-    public ngAuthService: NgAuthService
+    public ngAuthService: NgAuthService,
+    public dataService: UserDataService
     ) { }
-  
-  jUserData = JSON.parse(localStorage.getItem('user'));
-  userData: string;
 
   ngOnInit() {
     this.uploadService.getUrl();
+    this.dataService.getNameData();
+    this.dataService.getEmailData();
   }
 }
