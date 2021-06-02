@@ -20,15 +20,5 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit() {
     this.uploadService.getUrl();
-    this.getUserInfo();
-  }
-
-  getUserInfo() {
-    if(this.jUserData.displayName == '') {
-      this.userData = 'Unknown';
-      console.log(this.userData);
-    } else {
-      this.userData = this.jUserData.displayName;
-    }
   }
 }
