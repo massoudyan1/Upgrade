@@ -8,6 +8,7 @@ import 'firebase/auth';
 export interface User {
   uid: string;
   email: string;
+  name: string;
 }
 
 @Injectable({
@@ -115,7 +116,8 @@ export class NgAuthService {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
     const userState: User = {
       uid: user.uid,
-      email: user.email
+      email: user.email,
+      name: user.displayName
     };
     return userRef.set(userState, {
       merge: true
