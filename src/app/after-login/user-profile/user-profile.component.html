@@ -1,106 +1,77 @@
-<div class="main">
-    <div class="user-settings">
-        <div class="flex-container">
-            <div class="profil-image">
-                <p>Profil billede</p>
-                <div class="imageBox">
-                    <img class="UserImage"
-                        [defaultImage]="'https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=790b761155be4ddd23123de1bf9d94fce21877f4e92e9726&rid=giphy.gif&ct=g'"
-                        [lazyLoad]="this.uploadService.url" alt="image" />
-                </div>
-                <p-fileUpload name="myfile[]" mode="basic" auto="true" chooseLabel="Vælg billede..." fileLimit="1"
-                    customUpload="true" (uploadHandler)="uploadService.uploadFile($event)" accept="image/*">
-                </p-fileUpload>
-            </div>
-            <div class="Userdata">
-                <div class="input_warp">
-                    <!-- ændre navn -->
-                    <span class="p-float-label">
-                        <span class="userSpan"> {{this.dataService.userDataName}} </span>
-                        <button class="btn">edit</button>
-                        <label for="name">Navn</label>
-                    </span>
-                </div>
-                <div class="input_warp">
-                    <!-- ændre Email -->
-                    <span class="p-float-label">
-                        <span>{{this.dataService.userDataMail}}</span>
-                        <label for="email">Email</label>
-                    </span>
-                </div>
-                <div class="input_warp">
-                    <!-- ændre kodeord -->
-                    <span class="p-float-label">
-                        <span>Mand</span>
-                        <label for="gender">Køn</label>
-                    </span>
-                </div>
-                <div class="input_warp">
-                    <!-- ændre fødselsdag -->
-                    <span class="p-float-label">
-                        <h3>10/7/2001</h3>
-                        <label for="birthday">Fødselsdag</label>
-                    </span>
-                </div>
-                <div class="input_warp">
-                    <!-- ændre højde -->
-                    <span class="p-float-label">
-                        <h3>170</h3>
-                        <label for="height">Højde</label>
-                    </span>
-                </div>
-                <div class="input_warp">
-                    <!-- ændre vægt -->
-                    <span class="p-float-label">
-                        <h3>63</h3>
-                        <label for="weight">Vægt i kg.</label>
-                    </span>
-                </div>
-            </div>
-            <div class="UserLevel">
-                <div class="input_warp">
-                    <!-- ændre navn -->
-                    <span class="p-float-label">
-                        <h3>Level 2</h3>
-                        <label for="færdighed1">Svømning</label>
-                    </span>
-                </div>
-                <div class="input_warp">
-                    <!-- ændre Email -->
-                    <span class="p-float-label">
-                        <h3>Level 9</h3>
-                        <label for="færdighed2">Tærning</label>
-                    </span>
-                </div>
-                <div class="input_warp">
-                    <!-- ændre kodeord -->
-                    <span class="p-float-label">
-                        <h3>Level 1</h3>
-                        <label for="færdighed3">Mad lavning</label>
-                    </span>
-                </div>
-                <div class="input_warp">
-                    <!-- ændre fødselsdag -->
-                    <span class="p-float-label">
-                        <h3>Level 3</h3>
-                        <label for="færdighed4">Læse træning</label>
-                    </span>
-                </div>
-                <div class="input_warp">
-                    <!-- ændre højde -->
-                    <span class="p-float-label">
-                        <h3>Level 10</h3>
-                        <label for="færdighed5">None</label>
-                    </span>
-                </div>
-                <div class="input_warp">
-                    <!-- ændre vægt -->
-                    <span class="p-float-label">
-                        <h3>Level 0</h3>
-                        <label for="færdighed6">None</label>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
+<div id="container">
+
+   <div class="box">
+       <div class="content" id="profile-pic">
+          <img>
+          <p>Profil Billede</p>
+       </div>
+       <div class="content center" id="profile">
+         <div class="profile-info">
+            <p>hej</p>
+            <p>hej</p>
+            <button>hej</button>
+         </div>
+          <div class="profile-info">
+             <p>hej</p>
+             <p>hej</p>
+             <p>hej</p>
+          </div>
+          <div class="profile-info">
+             <p>hej</p>
+             <p>hej</p>
+             <p>hej</p>
+          </div>
+          <div class="profile-info">
+             <p>hej</p>
+             <p>hej</p>
+             <p>hej</p>
+          </div>
+          <div class="profile-info">
+             <p>hej</p>
+             <p>hej</p>
+             <p>hej</p>
+          </div>
+          <div class="profile-info">
+             <p>hej</p>
+             <p>hej</p>
+             <p>hej</p>
+          </div>
+       </div>
+       <div class="content" id="skills">
+         <div class="single-skill">
+            <p>xp</p>
+            <p>level</p>
+            <p>skill</p>
+         </div>
+          <div class="single-skill">
+             <p>xp</p>
+             <p>level</p>
+             <p>skill</p>
+          </div>
+          <div class="single-skill">
+             <p>xp</p>
+             <p>level</p>
+             <p>skill</p>
+          </div>
+          <div class="single-skill">
+             <p>xp</p>
+             <p>level</p>
+             <p>skill</p>
+          </div>
+          <div class="single-skill">
+             <p>xp</p>
+             <p>level</p>
+             <p>skill</p>
+          </div>
+          <div class="single-skill">
+             <p>xp</p>
+             <p>level</p>
+             <p>skill</p>
+          </div>
+
+       </div>
+   </div>
+
+
+
 </div>
