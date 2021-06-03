@@ -45,6 +45,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+
 
 
 @NgModule({
@@ -87,7 +89,8 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     RippleModule,
     FileUploadModule,
     AngularFireDatabaseModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    AutoCompleteModule
   ],
   providers: [NgAuthService, UploadService],
   bootstrap: [AppComponent]

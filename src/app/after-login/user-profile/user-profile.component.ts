@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UploadService } from '../../storage/upload.service';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { NgAuthService } from 'src/app/auth/auth.service';
@@ -17,9 +17,19 @@ export class UserProfileComponent implements OnInit {
     public dataService: UserDataService
     ) { }
 
+  edit: boolean = false;
+
   ngOnInit() {
     this.uploadService.getUrl();
     this.dataService.getNameData();
     this.dataService.getEmailData();
+  }
+
+  enableNameEdit() {
+    this.edit = true;
+  }
+
+  disableNameEdit() {
+    this.edit = false;
   }
 }

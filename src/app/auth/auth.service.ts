@@ -10,10 +10,6 @@ export interface User {
   email: string;
   displayName: string;
   emailVerified: boolean;
-  dob: string;
-  gender: string;
-  height: string;
-  weight: string;
 }
 
 @Injectable({
@@ -123,11 +119,7 @@ export class NgAuthService {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
-      emailVerified: user.emailVerified,
-      dob: user.dob,
-      gender: user.gender,
-      height: user.height,
-      weight: user.weight
+      emailVerified: user.emailVerified
     };
     return userRef.set(userState, {
       merge: true
