@@ -18,6 +18,7 @@ export class UserProfileComponent implements OnInit {
     ) { }
 
   editName: boolean = false;
+  editMail: boolean = false;
   editDOB: boolean = false;
   editGender: boolean = false;
   editHeight: boolean = false;
@@ -39,5 +40,45 @@ export class UserProfileComponent implements OnInit {
 
   disableNameEdit() {
     this.editName = false;
+  }
+
+  enableMailEdit() {
+    this.editMail = true;
+  }
+
+  disableMailEdit() {
+    this.editMail = false;
+  }
+
+  enableDOBEdit() {
+    this.editDOB = true;
+  }
+
+  disableDOBEdit() {
+    this.editDOB = false;
+  }
+
+  enableGenderEdit() {
+    this.editGender = true;
+  }
+
+  disableGenderEdit() {
+    this.editGender = false;
+  }
+
+  enableHeightEdit() {
+    this.editHeight = true;
+  }
+
+  disableHeightEdit() {
+    this.editHeight = false;
+  }
+
+  enableWeightEdit() {
+    this.editWeight = true;
+  }
+
+  disableWeightEdit() {
+    this.editWeight = false;
   }
 }

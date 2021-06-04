@@ -23,8 +23,13 @@
             </div>
             <div class="profile-info">
                 <p>Email</p>
-                <p>{{this.dataService.userMail}}</p>
-                <input class="btn" type="button" value="✍">
+                <p *ngIf="this.editMail == false">{{this.dataService.userMail}}</p>
+                <input *ngIf="this.editMail == false" class="btn" type="button" value="✍">
+                <div *ngIf="this.editMail == true">
+                    <input pInputText #email type="email" placeholder="Skriv din mail.">
+                    <button type="button" [disabled]="email.value == ''" class="btn"
+                        (click)="this.dataService.setEmail(email.value)">✍</button>
+                </div>
             </div>
             <div class="profile-info">
                 <p>Fødselsdag</p>
