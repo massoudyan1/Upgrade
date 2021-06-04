@@ -17,7 +17,7 @@
                 <div *ngIf="this.editName == false">
                     <p>{{this.dataService.userName}}</p>
                     <input class="btn" (click)="this.enableNameEdit();" type="button" value="✍">
-                </div>  
+                </div>
                 <div *ngIf="this.editName == true">
                     <input pInputText #name type="text" placeholder="Skriv dit navn.">
                     <button type="button" [disabled]="name.value == ''" class="btn"
@@ -25,13 +25,17 @@
                 </div>
             </div>
             <div class="profile-info">
-                <p>Email</p>
-                <p *ngIf="this.editMail == false">{{this.dataService.userMail}}</p>
-                <input *ngIf="this.editMail == false" class="btn" type="button" value="✍">
+                <div>
+                    <p>Email</p>
+                </div>
+                <div *ngIf="this.editMail == false">
+                    <p>{{this.dataService.userMail}}</p>
+                    <input class="btn" (click)="this.enableMailEdit();" type="button" value="✍">
+                </div>
                 <div *ngIf="this.editMail == true">
-                    <input pInputText #email type="email" placeholder="Skriv din mail.">
-                    <button type="button" [disabled]="email.value == ''" class="btn"
-                        (click)="this.dataService.setEmail(email.value)">✍</button>
+                    <input pInputText #mail type="text" placeholder="Skriv dit navn.">
+                    <button type="button" [disabled]="mail.value == ''" class="btn"
+                        (click)="this.dataService.setMail(mail.value); this.disableMailEdit()">✍</button>
                 </div>
             </div>
             <div class="profile-info">
