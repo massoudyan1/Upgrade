@@ -90,9 +90,10 @@ export class UserDataService {
     this.getNameData();
   }
 
-  setEmail(email: string) {
+  setMail(email: string) {
     this.afs.collection('users').doc(`${this.userId}`)
       .set({ email: email }, { merge: true });
+    this.getEmailData();
   }
 
   setDOB(dob: Date) {
