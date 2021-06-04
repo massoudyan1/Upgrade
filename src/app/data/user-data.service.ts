@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { formatDate } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +14,13 @@ export class UserDataService {
   jData = JSON.parse(localStorage.getItem('user'));
   userName: string;
   userMail: string;
-  userDOB: Date;
+  userDOB: string;
   userHeight: number;
   userWeight: number;
   userId = this.jData.uid;
+  userDate = new Date("1999-09-09");
+  dateFormat = 'dd/MM/yyyy';
+  dateLocale = 'en-DK';
 
   getNameData() {
     this.afs.collection('users').doc(`${this.userId}`).get().toPromise().then((doc) => {
@@ -31,7 +35,8 @@ export class UserDataService {
   getDOB() {
     this.afs.collection('users').doc(`${this.userId}`).get().toPromise().then((doc) => {
       if (doc.get('dob') == null) {
-        this.userDOB = new Date("1999-09-09");
+        const formattedDate = formatDate(this.userDate, this.dateFormat, this.dateLocale);
+        this.userDOB = formattedDate;
       } else {
         this.userDOB = doc.get('dob');
       }
@@ -78,7 +83,7 @@ export class UserDataService {
     this.getNameData();
   }
 
-  setDOB(dob: Date) {
+  setDOB(dob: string) {
     this.afs.collection('users').doc(`${this.userId}`).set({ dob: dob }, { merge: true });
     this.getDOB();
   }
