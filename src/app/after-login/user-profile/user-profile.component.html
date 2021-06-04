@@ -22,22 +22,22 @@
             <div class="profile-info">
                 <p>Email</p>
                 <p>{{this.dataService.userMail}}</p>
-                <p></p>
+                <input class="btn" type="button" value="✍">
             </div>
             <div class="profile-info">
                 <p>Fødselsdag</p>
-                <p>{{this.dataService.userDOB}}</p>
-                <p>hej</p>
+                <p>{{this.dataService.userDOB | date:'dd/MM/yyyy'}}</p>
+                <input class="btn" type="button" value="✍">
             </div>
             <div class="profile-info">
                 <p>Højde</p>
-                <p>{{this.dataService.userHeight}} cm</p>
-                <p>hej</p>
+                <p>{{this.dataService.userHeight}}cm</p>
+                <input class="btn" type="button" value="✍">
             </div>
             <div class="profile-info">
                 <p>Vægt</p>
                 <p>{{this.dataService.userWeight}}kg</p>
-                <p>hej</p>
+                <input class="btn" type="button" value="✍">
             </div>
             <div class="profile-info">
                 <p>hej</p>

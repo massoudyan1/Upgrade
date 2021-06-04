@@ -18,6 +18,10 @@ export class UserProfileComponent implements OnInit {
     ) { }
 
   editName: boolean = false;
+  editDOB: boolean = false;
+  editGender: boolean = false;
+  editHeight: boolean = false;
+  editWeight: boolean = false;
 
   ngOnInit() {
     this.uploadService.getUrl();

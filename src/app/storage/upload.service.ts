@@ -27,7 +27,7 @@ export class UploadService {
     await this.afStorage.upload(filePath, this.file, metaData); // Uploads image to Firebase
     if (this.file) { // Checks if fil value has a file(which means true)
       console.log('Uploading: ', this.file.name); // Shows file uploading in Console
-      form.clear();
+      form.clear(); // Clears upload button, so image doesn't get uploaded again.
       this.getUrl(); // Runs getURL function to display image
     } else {
       console.log('Select a image please.');
