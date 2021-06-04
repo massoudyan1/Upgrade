@@ -65,6 +65,10 @@ div.profile-info {
   padding: 0 4px 0 4px;
 }
 
+.profile-info * {
+  flex: 1;
+}
+
 .content#skills {
   display: flex;
   flex-direction: column;
@@ -83,8 +87,11 @@ div.single-skill {
 
 .btn {
   color: #fff;
-  background-color: #32a852;
+  background-color: #FFF;
   border-radius: 20px;
   height: 1.5em;
   margin-top: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
