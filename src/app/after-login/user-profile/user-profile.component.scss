@@ -65,12 +65,15 @@ div.profile-info {
   padding: 0 4px 0 4px;
 }
 
-.profile-info * {
-  flex: 1;
-}
 .profile-info div {
   display: flex;
   flex-direction: row;
+}
+.profile-info .one{
+  flex: 1;
+}
+.profile-info .two {
+  flex: 2;
 }
 .profile-info div * {
   flex: 1;
