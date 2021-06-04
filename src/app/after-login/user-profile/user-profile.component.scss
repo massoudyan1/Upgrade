@@ -19,7 +19,7 @@
 .content {
   flex: 1;
   width: 95%;
-  height: 60vw;
+  height: 80vh;
   background-color: white;
   border-radius: 20px;
   padding: 10px 5px 10px 5px;
@@ -33,27 +33,26 @@
 }
 
 .content#profile-pic img {
-  width: 97%;
+  max-width: 97%;
   height: 50%;
   border-radius: 20px;
-  background-color: red;
-
+  object-fit: cover;
 }
 .content#profile-pic p {
   width: 97%;
   height: 10%;
   border-radius: 20px;
-  background-color: red;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: large;
-  font-weight: bold;
+  font-weight: 400;
   padding: 17px;
 }
 
 .content#profile {
   display: flex;
   flex-direction: column;
-  background-color: gray;
+  background-color: white;
   justify-content: space-around;
 }
 div.profile-info {
@@ -61,7 +60,7 @@ div.profile-info {
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  background-color: lightblue;
+  background-color: white;
   border-radius: 20px;
   padding: 0 4px 0 4px;
 }
@@ -69,7 +68,7 @@ div.profile-info {
 .content#skills {
   display: flex;
   flex-direction: column;
-  background-color: gray;
+  background-color: white;
   justify-content: space-around;
 }
 div.single-skill {
@@ -77,7 +76,18 @@ div.single-skill {
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  background-color: lightblue;
+  background-color: white;
   border-radius: 20px;
   padding: 0 4px 0 4px;
+}
+
+.btn {
+  position: relative;
+  outline: none;
+  color: #fff;
+  background-color: #32a852;
+  border: none;
+  border-radius: 20px;
+  height: 1.5em;
+  width: 4.5em;
 }

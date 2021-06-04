@@ -20,13 +20,14 @@ export class UploadService {
   basePath = `/uploads/images/${this.iUser}`; // Reference for basePath
 
   // Function that will upload image to Firebase Storage
-  async uploadFile(event: any) {
+  async uploadFile(event: any, form) {
     this.file = event.files[0]; // Takes the image from the upload component
     const filePath = `${this.basePath}/profilepic`; // Constant for file placement
     const metaData = { 'contentType': this.file.type }; // Metadata for the image file
     await this.afStorage.upload(filePath, this.file, metaData); // Uploads image to Firebase
     if (this.file) { // Checks if fil value has a file(which means true)
       console.log('Uploading: ', this.file.name); // Shows file uploading in Console
+      form.clear();
       this.getUrl(); // Runs getURL function to display image
     } else {
       console.log('Select a image please.');

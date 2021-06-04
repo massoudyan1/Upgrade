@@ -17,19 +17,23 @@ export class UserProfileComponent implements OnInit {
     public dataService: UserDataService
     ) { }
 
-  edit: boolean = false;
+  editName: boolean = false;
 
   ngOnInit() {
     this.uploadService.getUrl();
     this.dataService.getNameData();
     this.dataService.getEmailData();
+    this.dataService.getDOB();
+    this.dataService.getGender();
+    this.dataService.getHeight();
+    this.dataService.getWeight();
   }
 
   enableNameEdit() {
-    this.edit = true;
+    this.editName = true;
   }
 
   disableNameEdit() {
-    this.edit = false;
+    this.editName = false;
   }
 }
