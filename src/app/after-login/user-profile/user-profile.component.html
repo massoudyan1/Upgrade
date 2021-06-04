@@ -11,9 +11,13 @@
         </div>
         <div class="content center" id="profile">
             <div class="profile-info">
-                <p>Navn</p>
-                <p *ngIf="this.editName == false">{{this.dataService.userName}}</p>
-                <input *ngIf="this.editName == false" class="btn" (click)="this.enableNameEdit();" type="button" value="✍">
+                <div>
+                    <p>Navn</p>
+                </div>
+                <div *ngIf="this.editName == false">
+                    <p>{{this.dataService.userName}}</p>
+                    <input class="btn" (click)="this.enableNameEdit();" type="button" value="✍">
+                </div>  
                 <div *ngIf="this.editName == true">
                     <input pInputText #name type="text" placeholder="Skriv dit navn.">
                     <button type="button" [disabled]="name.value == ''" class="btn" (click)="this.dataService.setName(name.value); this.disableNameEdit()">✍</button>

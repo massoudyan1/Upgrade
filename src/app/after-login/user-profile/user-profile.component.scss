@@ -68,7 +68,14 @@ div.profile-info {
 .profile-info * {
   flex: 1;
 }
-
+.profile-info div {
+  display: flex;
+  flex-direction: row;
+}
+.profile-info div * {
+  flex: 1;
+  text-align: left;
+}
 .content#skills {
   display: flex;
   flex-direction: column;
