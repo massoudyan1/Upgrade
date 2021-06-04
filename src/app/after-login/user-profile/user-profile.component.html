@@ -33,25 +33,53 @@
                     <input class="btn" (click)="this.enableMailEdit();" type="button" value="✍">
                 </div>
                 <div *ngIf="this.editMail == true" class="two">
-                    <input pInputText #mail type="text" placeholder="Skriv dit navn.">
+                    <input pInputText #mail name="email" ngModel [email]="true" type="email"
+                        placeholder="Skriv din mail.">
                     <button type="button" [disabled]="mail.value == ''" class="btn"
                         (click)="this.dataService.setMail(mail.value); this.disableMailEdit()">✍</button>
                 </div>
             </div>
             <div class="profile-info">
-                <p>Fødselsdag</p>
-                <p>{{this.dataService.userDOB | date:'dd/MM/yyyy'}}</p>
-                <input class="btn" type="button" value="✍">
+                <div class="one">
+                    <p>Fødselsdag</p>
+                </div>
+                <div *ngIf="this.editDOB == false" class="two">
+                    <p>{{this.dataService.userDOB | date:'dd/MM/yyyy'}}</p>
+                    <input class="btn" (click)="this.enableDOBEdit();" type="button" value="✍">
+                </div>
+                <div *ngIf="this.editDOB == true" class="two">
+                    <input pInputText #date type="date" placeholder="Skriv din mail.">
+                    <button type="button" [disabled]="date.value == ''" class="btn"
+                        (click)="this.dataService.setDOB(date.value); this.disableDOBEdit()">✍</button>
+                </div>
             </div>
             <div class="profile-info">
-                <p>Højde</p>
-                <p>{{this.dataService.userHeight}}cm</p>
-                <input class="btn" type="button" value="✍">
+                <div class="one">
+                    <p>Højde</p>
+                </div>
+                <div *ngIf="this.editHeight == false" class="two">
+                    <p>{{this.dataService.userHeight}}cm</p>
+                    <input class="btn" (click)="this.enableHeightEdit();" type="button" value="✍">
+                </div>
+                <div *ngIf="this.editHeight == true" class="two">
+                    <input pInputText #height type="number" placeholder="Skriv din højde.">
+                    <button type="button" [disabled]="height.value == ''" class="btn"
+                        (click)="this.dataService.setHeight(height.value); this.disableHeightEdit()">✍</button>
+                </div>
             </div>
             <div class="profile-info">
-                <p>Vægt</p>
-                <p>{{this.dataService.userWeight}}kg</p>
-                <input class="btn" type="button" value="✍">
+                <div class="one">
+                    <p>Vægt</p>
+                </div>
+                <div *ngIf="this.editWeight == false" class="two">
+                    <p>{{this.dataService.userWeight}}kg</p>
+                    <input class="btn" (click)="this.enableWeightEdit();" type="button" value="✍">
+                </div>
+                <div *ngIf="this.editWeight== true" class="two">
+                    <input pInputText #weight type="number" placeholder="Skriv din vægt.">
+                    <button type="button" [disabled]="weight.value == ''" class="btn"
+                        (click)="this.dataService.setWeight(weight.value); this.disableWeightEdit()">✍</button>
+                </div>
             </div>
         </div>
         <div class="content" id="skills">
