@@ -20,28 +20,34 @@
                 </div>  
                 <div *ngIf="this.editName == true">
                     <input pInputText #name type="text" placeholder="Skriv dit navn.">
-                    <button type="button" [disabled]="name.value == ''" class="btn" (click)="this.dataService.setName(name.value); this.disableNameEdit()">✍</button>
+                    <button type="button" [disabled]="name.value == ''" class="btn"
+                        (click)="this.dataService.setName(name.value); this.disableNameEdit()">✍</button>
                 </div>
             </div>
             <div class="profile-info">
                 <p>Email</p>
-                <p>{{this.dataService.userMail}}</p>
-                <p></p>
+                <p *ngIf="this.editMail == false">{{this.dataService.userMail}}</p>
+                <input *ngIf="this.editMail == false" class="btn" type="button" value="✍">
+                <div *ngIf="this.editMail == true">
+                    <input pInputText #email type="email" placeholder="Skriv din mail.">
+                    <button type="button" [disabled]="email.value == ''" class="btn"
+                        (click)="this.dataService.setEmail(email.value)">✍</button>
+                </div>
             </div>
             <div class="profile-info">
                 <p>Fødselsdag</p>
-                <p>{{this.dataService.userDOB}}</p>
-                <p>hej</p>
+                <p>{{this.dataService.userDOB | date:'dd/MM/yyyy'}}</p>
+                <input class="btn" type="button" value="✍">
             </div>
             <div class="profile-info">
-                <p>hej</p>
-                <p>hej</p>
-                <p>hej</p>
+                <p>Højde</p>
+                <p>{{this.dataService.userHeight}}cm</p>
+                <input class="btn" type="button" value="✍">
             </div>
             <div class="profile-info">
-                <p>hej</p>
-                <p>hej</p>
-                <p>hej</p>
+                <p>Vægt</p>
+                <p>{{this.dataService.userWeight}}kg</p>
+                <input class="btn" type="button" value="✍">
             </div>
             <div class="profile-info">
                 <p>hej</p>
