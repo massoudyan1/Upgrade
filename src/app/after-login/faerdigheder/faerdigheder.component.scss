@@ -1,0 +1,80 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+  
+.main {
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 15vh;
+    background: #f6fff8;
+}
+
+// categories lists
+
+.list-categories {
+    padding: 10px;
+}
+
+button {
+    background-color: #32a852;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    border: 1px solid #32a852;
+    font-size: 1rem;
+    color: #fff;
+    margin-left: -10px;
+}
+
+.button-left {
+    margin-left: 10px;
+}
+
+// all in table list
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border: solid;
+    border-width: 1px 0;
+}
+
+td {
+    padding: 15px;
+}
+
+.table-list {
+    width: 100%;
+    position: relative;
+}
+
+.skills-list {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.item-tittle {
+    color: #fff;
+    background-color: #32a852;
+    font-size: 1.5rem;
+    font-weight: 400px;
+}
+
+.item-list {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.item-row-name {
+    text-align: left;
+}
+
+.item-list {
+    color: #111;
+    font-size: 1rem;
+}

@@ -10,7 +10,7 @@ import { ForgotPasswordComponent } from './before-login/forgot-password/forgot-p
 import { EmailVerificationComponent } from './before-login/email-verification/email-verification.component';
 import { DashboardComponent } from './after-login/dashboard/dashboard.component';
 import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
-
+import { FaerdighederComponent } from './after-login/faerdigheder/faerdigheder.component';
 
 const routes: Routes = [
   {
@@ -54,6 +54,11 @@ const routes: Routes = [
   {
     path: 'user-profile',
     component: UserProfileComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'faerdigheder',
+    component: FaerdighederComponent,
     canActivate: [AuthGuard]
   }
 ];

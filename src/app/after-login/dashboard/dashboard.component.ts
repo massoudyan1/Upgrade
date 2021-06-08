@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
           'Svømning',
           'Mad lavning',
           'Læse træning',
-          'Lære Kodning',
+          'Lære Programing',
           'Tærning'
         ],
         datasets: [{
