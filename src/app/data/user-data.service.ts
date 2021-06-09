@@ -71,7 +71,7 @@ export class UserDataService {
         } else {
           this.userWeight = doc.get('weight');
         }
-      })
+      });
   }
 
   getGender() {
@@ -80,7 +80,7 @@ export class UserDataService {
         if (doc.get('gender') == null) {
           // WIP
         }
-      })
+      });
   }
 
   setName(name: string) {

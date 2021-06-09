@@ -16,12 +16,12 @@
                 </div>
                 <div *ngIf="this.editName == false" class="two">
                     <p>{{this.dataService.userName}}</p>
-                    <input class="btn" (click)="this.enableNameEdit();" type="button" value="✍">
+                    <input class="btn" (click)="this.editName = true;" type="button" value="✍">
                 </div>
                 <div *ngIf="this.editName == true" class="two">
                     <input pInputText #name type="text" placeholder="Skriv dit navn.">
                     <button type="button" [disabled]="name.value == ''" class="btn"
-                        (click)="this.dataService.setName(name.value); this.disableNameEdit()">✍</button>
+                        (click)="this.dataService.setName(name.value); this.editName = false;">✍</button>
                 </div>
             </div>
             <div class="profile-info">
@@ -30,13 +30,13 @@
                 </div>
                 <div *ngIf="this.editMail == false" class="two">
                     <p>{{this.dataService.userMail}}</p>
-                    <input class="btn" (click)="this.enableMailEdit();" type="button" value="✍">
+                    <input class="btn" (click)="this.editMail = true;" type="button" value="✍">
                 </div>
                 <div *ngIf="this.editMail == true" class="two">
                     <input pInputText #mail name="email" ngModel [email]="true" type="email"
                         placeholder="Skriv din mail.">
                     <button type="button" [disabled]="mail.value == ''" class="btn"
-                        (click)="this.dataService.setMail(mail.value); this.disableMailEdit()">✍</button>
+                        (click)="this.dataService.setMail(mail.value); this.editMail = false;">✍</button>
                 </div>
             </div>
             <div class="profile-info">
@@ -45,12 +45,12 @@
                 </div>
                 <div *ngIf="this.editDOB == false" class="two">
                     <p>{{this.dataService.userDOB | date:'dd/MM/yyyy'}}</p>
-                    <input class="btn" (click)="this.enableDOBEdit();" type="button" value="✍">
+                    <input class="btn" (click)="this.editDOB = true;" type="button" value="✍">
                 </div>
                 <div *ngIf="this.editDOB == true" class="two">
                     <input pInputText #date type="date" placeholder="Skriv din mail.">
                     <button type="button" [disabled]="date.value == ''" class="btn"
-                        (click)="this.dataService.setDOB(date.value); this.disableDOBEdit()">✍</button>
+                        (click)="this.dataService.setDOB(date.value); this.editDOB = false;">✍</button>
                 </div>
             </div>
             <div class="profile-info">
@@ -59,12 +59,12 @@
                 </div>
                 <div *ngIf="this.editHeight == false" class="two">
                     <p>{{this.dataService.userHeight}}cm</p>
-                    <input class="btn" (click)="this.enableHeightEdit();" type="button" value="✍">
+                    <input class="btn" (click)="this.editHeight = true;" type="button" value="✍">
                 </div>
                 <div *ngIf="this.editHeight == true" class="two">
                     <input pInputText #height type="number" placeholder="Skriv din højde.">
                     <button type="button" [disabled]="height.value == ''" class="btn"
-                        (click)="this.dataService.setHeight(height.value); this.disableHeightEdit()">✍</button>
+                        (click)="this.dataService.setHeight(height.value); this.editHeight = false;">✍</button>
                 </div>
             </div>
             <div class="profile-info">
@@ -73,12 +73,12 @@
                 </div>
                 <div *ngIf="this.editWeight == false" class="two">
                     <p>{{this.dataService.userWeight}}kg</p>
-                    <input class="btn" (click)="this.enableWeightEdit();" type="button" value="✍">
+                    <input class="btn" (click)="this.editWeight = true;" type="button" value="✍">
                 </div>
                 <div *ngIf="this.editWeight== true" class="two">
                     <input pInputText #weight type="number" placeholder="Skriv din vægt.">
                     <button type="button" [disabled]="weight.value == ''" class="btn"
-                        (click)="this.dataService.setWeight(weight.value); this.disableWeightEdit()">✍</button>
+                        (click)="this.dataService.setWeight(weight.value); this.editWeight = false;">✍</button>
                 </div>
             </div>
         </div>

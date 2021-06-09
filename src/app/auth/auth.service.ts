@@ -36,44 +36,48 @@ export class NgAuthService {
     });
   }
 
-  SignIn(email: string, password: string) {
-    return this.afAuth.signInWithEmailAndPassword(email, password)
-      .then((result) => {
-        this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
-        });
-        this.SetUserData(result.user);
-      }).catch((error) => {
-        console.log(error.message);
+  async SignIn(email: string, password: string) {
+    try {
+      const result = await this.afAuth.signInWithEmailAndPassword(email, password);
+      this.ngZone.run(() => {
+        this.router.navigate(['dashboard']);
       });
+      this.SetUserData(result.user);
+    }
+    catch (error) {
+      console.log(error.message);
+    }
   }
 
-  SignUp(email: string, password: string) {
-    return this.afAuth.createUserWithEmailAndPassword(email, password)
-      .then((result) => {
-        this.SendVerificationMail();
-        this.SetUserData(result.user);
-      }).catch((error) => {
-        console.log(error.message);
-      });
+  async SignUp(email: string, password: string) {
+    try {
+      const result = await this.afAuth.createUserWithEmailAndPassword(email, password);
+      this.SendVerificationMail();
+      this.SetUserData(result.user);
+    }
+    catch (error) {
+      console.log(error.message);
+    }
   }
 
-  SendVerificationMail(): Promise<any> {
-    return this.afAuth.currentUser.then(u => this.userState.sendEmailVerification())
-      .then(() => {
-        this.router.navigate(['email-verification']);
-      }).catch((error) => {
-        console.log(error.message);
-      });
+  async SendVerificationMail(): Promise<any> {
+    try {
+      this.userState.sendEmailVerification();
+      this.router.navigate(['email-verification']);
+    }
+    catch (error) {
+      console.log(error.message);
+    }
   }
 
-  ForgotPassword(passwordResetEmail: string) {
-    return this.afAuth.sendPasswordResetEmail(passwordResetEmail)
-      .then(() => {
-        this.router.navigate(['forgot-password']);
-      }).catch((error) => {
-        console.log(error.message);
-      });
+  async ForgotPassword(passwordResetEmail: string) {
+    try {
+      await this.afAuth.sendPasswordResetEmail(passwordResetEmail);
+      this.router.navigate(['forgot-password']);
+    }
+    catch (error) {
+      console.log(error.message);
+    }
   }
 
   get isLoggedIn(): boolean {
@@ -101,16 +105,17 @@ export class NgAuthService {
     return this.AuthLogin(new firebase.auth.TwitterAuthProvider());
   }
 
-  AuthLogin(provider: any) {
-    return this.afAuth.signInWithPopup(provider)
-      .then((result) => {
-        this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
-        });
-        this.SetUserData(result.user);
-      }).catch((error) => {
-        console.log(error.message);
+  async AuthLogin(provider: any) {
+    try {
+      const result = await this.afAuth.signInWithPopup(provider);
+      this.ngZone.run(() => {
+        this.router.navigate(['dashboard']);
       });
+      this.SetUserData(result.user);
+    }
+    catch (error) {
+      console.log(error.message);
+    }
   }
 
   SetUserData(user: any) {
