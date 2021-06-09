@@ -46,6 +46,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { AutoCompleteModule } from 'primeng/autocomplete';
+import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@angular/fire/performance';
 
 
 
@@ -90,9 +91,14 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     FileUploadModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    AngularFirePerformanceModule
   ],
-  providers: [NgAuthService, UploadService],
+  providers: [
+    NgAuthService, 
+    UploadService, 
+    PerformanceMonitoringService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
