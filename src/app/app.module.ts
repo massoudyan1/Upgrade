@@ -14,6 +14,8 @@ import { OpgraderComponent } from './after-login/faerdigheder/opgrader/opgrader.
 import { SlutsideComponent } from './after-login/faerdigheder/slutside/slutside.component';
 import { BeskederComponent } from './after-login/beskeder/beskeder.component';
 import { AppComponent } from './app.component';
+
+// Before-login
 import { WelcomeComponent } from './before-login/welcome/welcome.component';
 import { AboutComponent } from './before-login/about/about.component';
 import { ContactComponent } from './before-login/contact/contact.component';
@@ -45,6 +47,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { AutoCompleteModule } from 'primeng/autocomplete';
+import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@angular/fire/performance';
 
 
 
@@ -87,9 +90,14 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     FileUploadModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    AngularFirePerformanceModule
   ],
-  providers: [NgAuthService, UploadService],
+  providers: [
+    NgAuthService, 
+    UploadService, 
+    PerformanceMonitoringService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

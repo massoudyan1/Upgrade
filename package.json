@@ -28,6 +28,7 @@
     "@firebase/webchannel-wrapper": "^0.4.1",
     "chart.js": "^2.9.4",
     "firebase": "^8.6.3",
+    "firebase-tools": "^9.12.1",
     "ng-lazyload-image": "^9.1.0",
     "primeicons": "^4.1.0",
     "primeng": "^11.4.2",
