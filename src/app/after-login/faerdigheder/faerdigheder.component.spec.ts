@@ -8,9 +8,9 @@ describe('FaerdighederComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FaerdighederComponent ]
+      declarations: [FaerdighederComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

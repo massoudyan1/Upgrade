@@ -8,9 +8,9 @@ describe('EnkeltComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EnkeltComponent ]
+      declarations: [EnkeltComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

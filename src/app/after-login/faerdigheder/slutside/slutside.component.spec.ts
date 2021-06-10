@@ -8,9 +8,9 @@ describe('SlutsideComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SlutsideComponent ]
+      declarations: [SlutsideComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
