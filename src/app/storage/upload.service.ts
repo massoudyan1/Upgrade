@@ -19,8 +19,19 @@ export class UploadService {
   iUser = this.iUserData.uid; // Gets unique id from iUserData
   basePath = `/uploads/images/${this.iUser}`; // Reference for basePath
 
-  // Function that will upload image to Firebase Storage
-  async uploadFile(event: any, form) {
+  /**
+   * 
+   * Upload image to Firebase Storage Bucket.
+   * 
+   * Uses ```event``` array and puts it into the array.
+   * 
+   * Then makes ```this.file``` equal to the arrays 0 index.
+   * ```this.file``` is a variable that uses the File so I can use it's name and other properties from the selected file.
+   * 
+   * Then it uploads the image into the declared ```basePath``` with a file name specified as profilepic.
+   * 
+   */
+  async uploadFile(event: any, form: any) {
     this.file = event.files[0]; // Takes the image from the upload component
     const filePath = `${this.basePath}/profilepic`; // Constant for file placement
     const metaData = { 'contentType': this.file.type }; // Metadata for the image file
@@ -34,7 +45,10 @@ export class UploadService {
     }
   }
 
-  // Function to get downloadURL for item
+  /**
+   * Get download URL from uploaded file and displays it.
+   * Stores value into: ```this.url;```
+   */
   async getUrl() {
     const filePath = `${this.basePath}/profilepic`; // Constant for file placement
     const snap = this.afStorage.storage.ref(filePath); // Gets location of item
