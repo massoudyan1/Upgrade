@@ -13,8 +13,8 @@ export class UploadService {
   constructor(private afStorage: AngularFireStorage,
     @Inject(NgAuthService) private user: User
   ) { }
-  file: File; // Uses File functionality to get item info
-  url = ''; // Used below for URL storage
+  file: File; // Sets file to use File interface.
+  url = ''; // Used for URL storage
   iUserData = JSON.parse(localStorage.getItem('user')); // Parses and makes iUserData usable elsewhere
   iUser = this.iUserData.uid; // Gets unique id from iUserData
   basePath = `/uploads/images/${this.iUser}`; // Reference for basePath
@@ -26,7 +26,7 @@ export class UploadService {
    * Uses ```event``` array and puts it into the array.
    * 
    * Then makes ```this.file``` equal to the arrays 0 index.
-   * ```this.file``` is a variable that uses the File so I can use it's name and other properties from the selected file.
+   * ```this.file``` is a variable that uses the interface File so I can use it's name and other properties from the selected file.
    * 
    * Then it uploads the image into the declared ```basePath``` with a file name specified as profilepic.
    * 
@@ -47,6 +47,7 @@ export class UploadService {
 
   /**
    * Get download URL from uploaded file and displays it.
+   * 
    * Stores value into: ```this.url;```
    */
   async getUrl() {
