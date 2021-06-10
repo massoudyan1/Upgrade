@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
 
   ngAfterViewInit() {
     this.canvas = this.mychart.nativeElement;
-    this.ctx = this.canvas.getContext('2d'); 
+    this.ctx = this.canvas.getContext('2d');
 
     new Chart(this.ctx, {
       type: 'radar',
