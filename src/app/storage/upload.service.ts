@@ -36,7 +36,7 @@ export class UploadService {
     const filePath = `${this.basePath}/profilepic`; // Constant for file placement
     const metaData = { 'contentType': this.file.type }; // Metadata for the image file
     await this.afStorage.upload(filePath, this.file, metaData); // Uploads image to Firebase
-    if (this.file) { // Checks if fil value has a file(which means true)
+    if (this.file) { // Checks if file value has a file(which means true)
       console.log('Uploading: ', this.file.name); // Shows file uploading in Console
       form.clear(); // Clears upload button, so image doesn't get uploaded again.
       this.getUrl(); // Runs getURL function to display image
