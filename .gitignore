@@ -47,4 +47,4 @@ Thumbs.db
 .vscode/launch.json
 
 #Firebase cache files
-/.firebase
+.firebase/
