@@ -101,8 +101,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     })
   ],
   providers: [
-    NgAuthService, 
-    UploadService, 
+    NgAuthService,
+    UploadService,
     PerformanceMonitoringService
   ],
   bootstrap: [AppComponent]
