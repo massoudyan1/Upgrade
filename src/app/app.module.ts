@@ -48,6 +48,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@angular/fire/performance';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 
@@ -91,7 +92,13 @@ import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@ang
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     AutoCompleteModule,
-    AngularFirePerformanceModule
+    AngularFirePerformanceModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [
     NgAuthService, 
