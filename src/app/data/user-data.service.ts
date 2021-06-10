@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { formatDate } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -37,7 +36,6 @@ export class UserDataService {
     this.afs.collection('users').doc(`${this.userId}`).get()
       .toPromise().then((doc) => {
         if (doc.get('dob') == null) {
-
           this.userDOB = this.userDate;
         } else {
           this.userDOB = doc.get('dob');
