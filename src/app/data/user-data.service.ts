@@ -81,6 +81,10 @@ export class UserDataService {
       });
   }
 
+  /**
+   * Sets value of name field to a value that was provided from a input field
+   * @param name value is set when input comes from change on website.
+   */
   setName(name: string) {
     this.afs.collection('users').doc(`${this.userId}`)
       .set({ displayName: name }, { merge: true });
@@ -88,12 +92,20 @@ export class UserDataService {
     this.getNameData();
   }
 
+  /**
+   * Sets value of email field to a value that was provided from a input field.
+   * @param email value is set when input from change on website.
+   */
   setMail(email: string) {
     this.afs.collection('users').doc(`${this.userId}`)
       .set({ email: email }, { merge: true });
     this.getEmailData();
   }
 
+  /**
+   * Sets value of DOB field to a value that was provided from a input field.
+   * @param dob value is set when input comes from change on website.
+   */
   setDOB(dob: Date) {
     this.afs.collection('users').doc(`${this.userId}`)
       .set({ dob: dob }, { merge: true });
