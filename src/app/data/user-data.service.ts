@@ -72,17 +72,8 @@ export class UserDataService {
       });
   }
 
-  getGender() {
-    this.afs.collection('users').doc(`${this.userId}`).get()
-      .toPromise().then((doc) => {
-        if (doc.get('gender') == null) {
-          // WIP
-        }
-      });
-  }
-
   /**
-   * Sets value of name field to a value that was provided from a input field
+   * Sets value of name field to a value that was provided from a field
    * @param name value is set when input comes from change on website.
    */
   setName(name: string) {
@@ -93,7 +84,7 @@ export class UserDataService {
   }
 
   /**
-   * Sets value of email field to a value that was provided from a input field.
+   * Sets value of email field to a value that was provided from a field.
    * @param email value is set when input from change on website.
    */
   setMail(email: string) {
@@ -103,7 +94,7 @@ export class UserDataService {
   }
 
   /**
-   * Sets value of DOB field to a value that was provided from a input field.
+   * Sets value of DOB field to a value that was provided from a field.
    * @param dob value is set when input comes from change on website.
    */
   setDOB(dob: Date) {
@@ -112,18 +103,30 @@ export class UserDataService {
     this.getDOB();
   }
 
+  /**
+   * Sets value of height field to a value that was provided from a field.
+   * @param height value is set when input comes from change on website.
+   */
   setHeight(height: number) {
     this.afs.collection('users').doc(`${this.userId}`)
       .set({ height: height }, { merge: true });
     this.getHeight();
   }
 
+  /**
+   * Sets value of weight field to a value that was provided from a field.
+   * @param weight value is set when input comes from change on website.
+   */
   setWeight(weight: number) {
     this.afs.collection('users').doc(`${this.userId}`)
       .set({ weight: weight }, { merge: true });
     this.getWeight();
   }
 
+  /**
+   * Sets value of gender field to a value that was provided from a field.
+   * @param gender value is set when a selected value is provided from the website.
+   */
   setGender(gender: string) {
     this.afs.collection('users').doc(`${this.userId}`)
       .set({ gender: gender }, { merge: true });
