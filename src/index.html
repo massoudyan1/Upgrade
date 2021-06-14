@@ -12,10 +12,31 @@
   <link rel="preload" href="primeicons.e61f3495a7ecd3d571a4.woff" as="font" crossorigin="anonymous" type="font/woff">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#1976d2">
+  <style>
+    .app-loading {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .loader {
+      background: url(https://i.ibb.co/02fq6Vj/1490.gif) no-repeat center center;
+      z-index: 9999999999999;
+      width: 80px;
+      height: 80px;
+    }
+  </style>
 </head>
 
 <body>
-  <app-root></app-root>
+  <app-root>
+    <div class="app-loading">
+      <div class="loader"></div>
+    </div>
+  </app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 
