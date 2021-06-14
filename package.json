@@ -7,7 +7,7 @@
     "inst": "npm install",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod && npx firebase deploy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
