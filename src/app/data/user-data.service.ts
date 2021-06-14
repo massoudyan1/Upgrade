@@ -18,8 +18,6 @@ export class UserDataService {
   userWeight: number;
   userId = this.jData.uid;
   userDate = new Date("1999-09-09");
-  dateFormat = 'dd/MM/yyyy';
-  dateLocale = 'en-DK';
 
   getNameData() {
     this.afs.collection('users').doc(`${this.userId}`).get()
