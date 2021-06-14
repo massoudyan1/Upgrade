@@ -79,7 +79,6 @@ export class UserDataService {
   setName(name: string) {
     this.afs.collection('users').doc(`${this.userId}`)
       .set({ displayName: name }, { merge: true });
-    //localStorage.user = name;
     this.getNameData();
   }
 
