@@ -55,7 +55,6 @@ export class UploadService {
     const snap = this.afStorage.storage.ref(filePath); // Gets location of item
     await snap.getDownloadURL().then(url => {
       this.url = url;  // Store downloadURL from Firebase
-      console.log('Upload done'); // Tells upload is done
     });
   }
 }
