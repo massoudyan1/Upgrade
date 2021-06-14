@@ -67,6 +67,8 @@ export class UserDataService {
         } else {
           this.userWeight = doc.get('weight');
         }
+      }).catch((error) => {
+        console.log(error.message);
       });
   }
 
@@ -77,7 +79,7 @@ export class UserDataService {
   setName(name: string) {
     this.afs.collection('users').doc(`${this.userId}`)
       .set({ displayName: name }, { merge: true });
-    localStorage.user = name;
+    //localStorage.user = name;
     this.getNameData();
   }
 
