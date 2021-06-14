@@ -27,6 +27,8 @@ export class UserDataService {
         } else {
           this.userName = doc.get('displayName');
         }
+      }).catch((error) => {
+        console.log(error.message);
       });
   }
 
@@ -38,6 +40,8 @@ export class UserDataService {
         } else {
           this.userDOB = doc.get('dob');
         }
+      }).catch((error) => {
+        console.log(error.message);
       });
   }
 
@@ -45,6 +49,8 @@ export class UserDataService {
     this.afs.collection('users').doc(`${this.userId}`).get()
       .toPromise().then((doc) => {
         this.userMail = doc.get('email');
+      }).catch((error) => {
+        console.log(error.message);
       });
   }
 
@@ -56,6 +62,8 @@ export class UserDataService {
         } else {
           this.userHeight = doc.get('height');
         }
+      }).catch((error) => {
+        console.log(error.message);
       });
   }
 
