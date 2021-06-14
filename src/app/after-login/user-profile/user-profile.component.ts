@@ -20,7 +20,6 @@ export class UserProfileComponent implements OnInit {
   editName: boolean = false;
   editMail: boolean = false;
   editDOB: boolean = false;
-  editGender: boolean = false;
   editHeight: boolean = false;
   editWeight: boolean = false;
 
@@ -29,7 +28,6 @@ export class UserProfileComponent implements OnInit {
     this.dataService.getNameData();
     this.dataService.getEmailData();
     this.dataService.getDOB();
-    this.dataService.getGender();
     this.dataService.getHeight();
     this.dataService.getWeight();
   }

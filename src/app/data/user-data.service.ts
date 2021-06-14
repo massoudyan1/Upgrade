@@ -130,6 +130,5 @@ export class UserDataService {
   setGender(gender: string) {
     this.afs.collection('users').doc(`${this.userId}`)
       .set({ gender: gender }, { merge: true });
-    this.getGender();
   }
 }
