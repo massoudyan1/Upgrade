@@ -1,7 +1,8 @@
 <section id="about">
   <h1>Om Banden</h1>
-  <p>Vores bande består af tre veloplagte og talentfulde unge bandemedlemmer</p>
-  <p>Upgrade Banden tilbyder udvikling af web, Android og iOS apps i højeste kvalitet og altid til tiden</p>
+  <div *ngFor="let post of omos">
+    <p> {{post["text"]}} </p>
+  </div>
   <br><br>
   <div class="row">
     <div class="column">

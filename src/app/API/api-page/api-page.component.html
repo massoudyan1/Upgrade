@@ -1,0 +1,11 @@
+<!--
+    start json server to enable api.......
+    
+    npx json-server --watch json-server/db.json
+
+-->
+<h1>message using JSON Server API</h1>
+
+<div *ngFor="let message of messages" >
+    <p> {{ message['id'] }} {{ message['text'] }} </p>
+</div>

@@ -9,6 +9,7 @@ import { ForgotPasswordComponent } from './before-login/forgot-password/forgot-p
 import { EmailVerificationComponent } from './before-login/email-verification/email-verification.component';
 import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
 import { FaerdighederComponent } from './after-login/faerdigheder/faerdigheder.component';
+import { ApiPageComponent } from './API/api-page/api-page.component';
 
 const routes: Routes = [
   {
@@ -59,6 +60,10 @@ const routes: Routes = [
     component: FaerdighederComponent,
     canActivate: [AuthGuard]
   },
+  {
+    path: 'api-page',
+    component: ApiPageComponent
+  }
 
 ];
 

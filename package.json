@@ -30,6 +30,7 @@
     "chart.js": "^2.9.4",
     "firebase": "^8.6.3",
     "firebase-tools": "^9.12.1",
+    "json-server": "^0.16.3",
     "ng-lazyload-image": "^9.1.0",
     "primeicons": "^4.1.0",
     "primeng": "^11.4.2",

@@ -49,6 +49,7 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@angular/fire/performance';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { ApiPageComponent } from './API/api-page/api-page.component';
 
 
 
@@ -68,7 +69,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     KategoriComponent,
     OpgraderComponent,
     SlutsideComponent,
-    BeskederComponent
+    BeskederComponent,
+    ApiPageComponent
   ],
   imports: [
     BrowserModule,
