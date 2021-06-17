@@ -61,7 +61,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'api-page',
+    path: 'api-page', // start json server to enable api...   npx json-server --watch json-server/db.json
     component: ApiPageComponent
   }
 
