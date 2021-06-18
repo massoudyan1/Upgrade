@@ -19,6 +19,11 @@ export class UserDataService {
   userId = this.jData.uid;
   userDate = new Date("1999-09-09");
 
+  /**
+   * Gets value from a specified field using AngularFirestore
+   * 
+   * In this case it gets the name displayName field.
+   */
   getNameData() {
     this.afs.collection('users').doc(`${this.userId}`).get()
       .toPromise().then((doc) => {
@@ -32,6 +37,11 @@ export class UserDataService {
       });
   }
 
+  /**
+   * Gets value from a specified field using AngularFirestore
+   * 
+   * In this case it gets the DOB field.
+   */
   getDOB() {
     this.afs.collection('users').doc(`${this.userId}`).get()
       .toPromise().then((doc) => {
@@ -45,6 +55,11 @@ export class UserDataService {
       });
   }
 
+  /**
+   * Gets value from a specified field using AngularFirestore
+   * 
+   * In this case it gets the email field.
+   */
   getEmailData() {
     this.afs.collection('users').doc(`${this.userId}`).get()
       .toPromise().then((doc) => {
@@ -54,6 +69,11 @@ export class UserDataService {
       });
   }
 
+  /**
+   * Gets value from a specified field using AngularFirestore
+   * 
+   * In this case it gets the height field.
+   */
   getHeight() {
     this.afs.collection('users').doc(`${this.userId}`).get()
       .toPromise().then((doc) => {
@@ -67,6 +87,11 @@ export class UserDataService {
       });
   }
 
+  /**
+   * Gets value from a specified field using AngularFirestore.
+   * 
+   * In this case it gets the weight field.
+   */
   getWeight() {
     this.afs.collection('users').doc(`${this.userId}`).get()
       .toPromise().then((doc) => {
