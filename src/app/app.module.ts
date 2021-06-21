@@ -1,11 +1,11 @@
-import { SigninModule } from './before-login/signin/signin.module';
 // Env //
 import { environment } from '../environments/environment';
 
 // Components //
-import { ForgotPasswordComponent } from './before-login/forgot-password/forgot-password.component';
-import { EmailVerificationComponent } from './before-login/email-verification/email-verification.component';
-import { SignupComponent } from './before-login/signup/signup.component';
+import { AppComponent } from './app.component';
+import { ApiPageComponent } from './API/api-page/api-page.component';
+
+// After-login
 import { UserProfileComponent } from './after-login/user-profile/user-profile.component';
 import { FaerdighederComponent } from './after-login/faerdigheder/faerdigheder.component';
 import { EnkeltComponent } from './after-login/faerdigheder/enkelt/enkelt.component';
@@ -13,17 +13,20 @@ import { KategoriComponent } from './after-login/faerdigheder/kategori/kategori.
 import { OpgraderComponent } from './after-login/faerdigheder/opgrader/opgrader.component';
 import { SlutsideComponent } from './after-login/faerdigheder/slutside/slutside.component';
 import { BeskederComponent } from './after-login/beskeder/beskeder.component';
-import { AppComponent } from './app.component';
 
 // Before-login
 import { WelcomeComponent } from './before-login/welcome/welcome.component';
 import { AboutComponent } from './before-login/about/about.component';
 import { ContactComponent } from './before-login/contact/contact.component';
 import { NavComponent } from './before-login/nav/nav.component';
+import { ForgotPasswordComponent } from './before-login/forgot-password/forgot-password.component';
+import { EmailVerificationComponent } from './before-login/email-verification/email-verification.component';
+import { SignupComponent } from './before-login/signup/signup.component';
 
 // Services //
 import { UploadService } from './storage/upload.service';
 import { NgAuthService } from './auth/auth.service';
+import { PerformanceMonitoringService } from '@angular/fire/performance';
 
 // Modules //
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -47,9 +50,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import { AngularFirePerformanceModule, PerformanceMonitoringService } from '@angular/fire/performance';
+import { AngularFirePerformanceModule } from '@angular/fire/performance';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { ApiPageComponent } from './API/api-page/api-page.component';
 
 
 
