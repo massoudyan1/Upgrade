@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgAuthService } from './auth/auth.service';
 import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
