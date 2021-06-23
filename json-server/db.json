@@ -1,11 +1,26 @@
 {
     "messages": [
-       { "id": 1, "text": "API virker."  },
-       { "id": 2, "text": "API virker."  },
-       { "id": 3, "text": "gg api works" }
+        {
+            "id": 1,
+            "text": "API virker."
+        },
+        {
+            "id": 2,
+            "text": "API virker."
+        },
+        {
+            "id": 3,
+            "text": "gg api works"
+        }
     ],
     "omos": [
-        { "id": 1, "text": "Vores bande består af tre veloplagte og talentfulde unge bandemedlemmer" },
-        { "id": 2, "text": "Upgrade Banden tilbyder udvikling af web, Android og iOS apps i højeste kvalitet og altid til tiden" }
+        {
+            "id": 1,
+            "text": "Vores bande består af tre veloplagte og talentfulde unge bandemedlemmer"
+        },
+        {
+            "id": 2,
+            "text": "Upgrade Banden tilbyder udvikling af web, Android og iOS apps i højeste kvalitet og altid til tiden"
+        }
     ]
 }

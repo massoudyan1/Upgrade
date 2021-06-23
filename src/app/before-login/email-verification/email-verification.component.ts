@@ -19,5 +19,11 @@ export class EmailVerificationComponent implements OnInit {
   }
 
   ToastMsg() {
+    this.messageService.add({
+      severity: 'success',
+      summary: 'Succes',
+      detail: 'Bekræftelsesmailen er blevet gensendt!',
+      life: 2000
+    });
   }
 }

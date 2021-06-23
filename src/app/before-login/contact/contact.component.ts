@@ -66,14 +66,14 @@ export class ContactComponent implements OnInit {
             if (response['result'] == 'success') {
               this.messageService.add({
                 severity: 'success',
-                summary: 'Success',
+                summary: 'Succes',
                 detail: 'Din mail er blevet sendt.',
                 life: 2000
               });
             } else {
               this.messageService.add({
                 severity: 'error',
-                summary: 'Error',
+                summary: 'Fejl',
                 detail: 'Afsendelsen af din mail fik en fejl.',
                 life: 2000
               });
@@ -87,7 +87,7 @@ export class ContactComponent implements OnInit {
           error => {
             this.messageService.add({
               severity: 'error',
-              summary: 'Error',
+              summary: 'Fejl',
               detail:
                 'En fejl er opstået, prøv og genindlæs siden igen eller prøv senere.',
               life: 2000

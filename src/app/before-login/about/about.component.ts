@@ -14,9 +14,9 @@ export class AboutComponent implements OnInit {
   omos: Array<any> = [];
 
   ngOnInit(): void {
-    fetch("http://localhost:3000/omos")
-   .then((response: any) => response.json())
-   .then((data : any) => this.omos = data)
-   .catch((err: any) => console.log('Error: ' + err.message))
+    fetch("https://json-server-upgrade.herokuapp.com/omos")
+      .then((response: any) => response.json())
+      .then((data: any) => this.omos = data)
+      .catch((err: any) => console.log('Error: ' + err.message))
   }
 }
