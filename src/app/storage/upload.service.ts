@@ -26,6 +26,7 @@ export class UploadService {
    * Uses ```event``` array and puts it into the array.
    * 
    * Then makes ```this.file``` equal to the arrays 0 index.
+   * 
    * ```this.file``` is a variable that uses the interface File so I can use it's name and other properties from the selected file.
    * 
    * Then it uploads the image into the declared ```basePath``` with a file name specified as profilepic.
